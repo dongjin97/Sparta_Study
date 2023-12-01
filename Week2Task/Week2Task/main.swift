@@ -129,31 +129,22 @@ print("remainderResult : \(remainderResult)")
 // 하나의 클래스에 여러개의 책임을 가지고 있는것이 아닌 하나의 책임만을 가지도록 하여 내부의 다른 곳에 영향을끼치지 않게 한다.
 // 연산에 더 추가하여 확장하는 것이 간편하다.
 
-//MARK: -
+//MARK: - LV4
+mport Foundation
+
 protocol AbstractOperation{
     func operate(_ firstNumber : Double ,_ secondNumber: Double) -> Double
 }
 class Calculator {
-    var operation : AbstractOperation
-    init(operation: AbstractOperation) {
-        self.operation = operation
+    var abstractOperation : AbstractOperation
+    init(abstractOperation: AbstractOperation) {
+        self.abstractOperation = abstractOperation
     }
-    func changeProperty(oper: String){
-        switch oper{
-        case "+":
-            operation = AddOperation()
-        case "-":
-            operation = SubstractOperation()
-        case "*":
-            operation = MultiplyOperation()
-        case "/":
-            operation = DivideOperation()
-        default:
-            operation = AddOperation()
-        }
+    func changeProperty(oper: AbstractOperation){
+        self.abstractOperation = oper
     }
     func calculate(firstNumber: Double ,secondNumber: Double) -> Double {
-        return operation.operate(firstNumber, secondNumber)
+        return abstractOperation.operate(firstNumber, secondNumber)
     }
 }
 class AddOperation : AbstractOperation{
@@ -176,13 +167,13 @@ class DivideOperation : AbstractOperation{
         return firstNumber / secondNumber
     }
 }
-let calculator = Calculator(operation: AddOperation())
+let calculator = Calculator(abstractOperation: AddOperation())
 let addResult = calculator.calculate(firstNumber: 5, secondNumber: 5)
-calculator.changeProperty(oper: "-")
+calculator.changeProperty(oper: SubstractOperation())
 let subtractResult = calculator.calculate(firstNumber: 10, secondNumber: 5)
-calculator.changeProperty(oper: "*")
+calculator.changeProperty(oper: MultiplyOperation())
 let multiplyResult = calculator.calculate(firstNumber: 5, secondNumber: 5)
-calculator.changeProperty(oper: "/")
+calculator.changeProperty(oper: DivideOperation())
 let divideResult = calculator.calculate(firstNumber: 10, secondNumber: 5)
 
 print("addResult : \(addResult)")
