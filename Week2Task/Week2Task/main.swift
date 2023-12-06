@@ -130,7 +130,7 @@ print("remainderResult : \(remainderResult)")
 // 연산에 더 추가하여 확장하는 것이 간편하다.
 
 //MARK: - LV4
-mport Foundation
+import Foundation
 
 protocol AbstractOperation{
     func operate(_ firstNumber : Double ,_ secondNumber: Double) -> Double
