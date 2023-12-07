@@ -77,8 +77,6 @@ while true {
             menuNumber = 3
         case 5:
             print("\n아래와 같이 주문하시겠습니까?\n")
-            print("주문을 확인중입니다. 3초만 기다려주세요")
-            sleep(3)
             print("[ Orders ]")
             
             for order in orderList{
