@@ -22,6 +22,7 @@
 		F83D51AE2B230441004BCB59 /* BeerMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83D51AD2B230441004BCB59 /* BeerMenu.swift */; };
 		F83D51B02B23079F004BCB59 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83D51AF2B23079F004BCB59 /* Order.swift */; };
 		F83D51B22B230814004BCB59 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83D51B12B230814004BCB59 /* Account.swift */; };
+		F83D51B42B233005004BCB59 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83D51B32B233005004BCB59 /* Time.swift */; };
 		F8AABBEB2B20836300A6D9E1 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AABBEA2B20836300A6D9E1 /* Product.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		F83D51AD2B230441004BCB59 /* BeerMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerMenu.swift; sourceTree = "<group>"; };
 		F83D51AF2B23079F004BCB59 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		F83D51B12B230814004BCB59 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		F83D51B32B233005004BCB59 /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
 		F8AABBEA2B20836300A6D9E1 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,6 +95,7 @@
 				F839785D2B1DEF6300F92A00 /* ShackShackMenu.swift */,
 				F83D51AF2B23079F004BCB59 /* Order.swift */,
 				F83D51B12B230814004BCB59 /* Account.swift */,
+				F83D51B32B233005004BCB59 /* Time.swift */,
 				F83D51A62B22F45F004BCB59 /* Product */,
 				F83D518C2B22E695004BCB59 /* Submenu */,
 				F83D51A42B22ED96004BCB59 /* Util.swift */,
@@ -197,6 +200,7 @@
 				F83D51B02B23079F004BCB59 /* Order.swift in Sources */,
 				F83978622B1DF1A900F92A00 /* FrozenCustar.swift in Sources */,
 				F83D51902B22E89C004BCB59 /* Basket.swift in Sources */,
+				F83D51B42B233005004BCB59 /* Time.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,9 +6,13 @@
 //
 
 import Foundation
+let shackMeisterAle = Beer(menuNumber: 1, name: "ShackMeister Ale", price: 9.8, explains: "쉐이크식 버거를 위해 뉴욕 브루클린 브루어리에서 특별히 양조한 에일 맥주")
+let magpieBrewing = Beer(menuNumber: 2, name: "Magpie Brewing Co.", price: 6.8, explains: "Pale Ale, Draft")
+let beerList : [Beer] = [shackMeisterAle,magpieBrewing]
+
 struct BeerMenu {
     func run()->Beer?{
-        displaySubMenu(menu: bugerList)
+        displaySubMenu(menu: beerList)
         while true {
             var selectedProduct : Beer?
             guard let input = Util.readInput() else {

@@ -13,6 +13,7 @@ class ShackShackMenu{
         case drinks
         case beer
         case order
+        case cancel
     }
     let mainMenuNum : Int
     let mainMenuName : String
