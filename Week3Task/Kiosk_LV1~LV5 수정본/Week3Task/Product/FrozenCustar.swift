@@ -6,8 +6,11 @@
 //
 
 import Foundation
-class FrozenCustar : Menu{
+class FrozenCustar : Product{
     override func displayInfo(){
+        if name.count < 17 {
+            name = name.padding(toLength: 17, withPad: " ", startingAt: 0)
+        }
         print("\(menuNumber). \(name) | W \(price) | \(explains)")
     }
 }

@@ -6,9 +6,9 @@
 //
 
 import Foundation
-class Menu{
+class Product{
     let menuNumber : Int
-    let name : String
+    var name : String
     let price : Double
     let explains : String
     init(menuNumber: Int, name: String, price: Double, explains: String) {
@@ -21,3 +21,4 @@ class Menu{
         print("\(menuNumber). \(name) | W \(price) | \(explains)")
     }
 }
+

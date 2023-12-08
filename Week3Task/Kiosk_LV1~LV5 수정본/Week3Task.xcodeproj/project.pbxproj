@@ -13,8 +13,16 @@
 		F83978622B1DF1A900F92A00 /* FrozenCustar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83978612B1DF1A900F92A00 /* FrozenCustar.swift */; };
 		F83978642B1DF2CF00F92A00 /* Drinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83978632B1DF2CF00F92A00 /* Drinks.swift */; };
 		F83978662B1DF44100F92A00 /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83978652B1DF44100F92A00 /* Beer.swift */; };
-		F8A565D62B216414001CCDE9 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A565D52B216414001CCDE9 /* Order.swift */; };
-		F8AABBEB2B20836300A6D9E1 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AABBEA2B20836300A6D9E1 /* Menu.swift */; };
+		F83D518B2B22E690004BCB59 /* Kiosk.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83D518A2B22E690004BCB59 /* Kiosk.swift */; };
+		F83D51902B22E89C004BCB59 /* Basket.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83D518F2B22E89C004BCB59 /* Basket.swift */; };
+		F83D51A52B22ED96004BCB59 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83D51A42B22ED96004BCB59 /* Util.swift */; };
+		F83D51A82B22F671004BCB59 /* BugerMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83D51A72B22F671004BCB59 /* BugerMenu.swift */; };
+		F83D51AA2B230430004BCB59 /* FrozenCustarMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83D51A92B230430004BCB59 /* FrozenCustarMenu.swift */; };
+		F83D51AC2B230439004BCB59 /* DrinksMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83D51AB2B230439004BCB59 /* DrinksMenu.swift */; };
+		F83D51AE2B230441004BCB59 /* BeerMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83D51AD2B230441004BCB59 /* BeerMenu.swift */; };
+		F83D51B02B23079F004BCB59 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83D51AF2B23079F004BCB59 /* Order.swift */; };
+		F83D51B22B230814004BCB59 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83D51B12B230814004BCB59 /* Account.swift */; };
+		F8AABBEB2B20836300A6D9E1 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AABBEA2B20836300A6D9E1 /* Product.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,8 +45,16 @@
 		F83978612B1DF1A900F92A00 /* FrozenCustar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrozenCustar.swift; sourceTree = "<group>"; };
 		F83978632B1DF2CF00F92A00 /* Drinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drinks.swift; sourceTree = "<group>"; };
 		F83978652B1DF44100F92A00 /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
-		F8A565D52B216414001CCDE9 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
-		F8AABBEA2B20836300A6D9E1 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		F83D518A2B22E690004BCB59 /* Kiosk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kiosk.swift; sourceTree = "<group>"; };
+		F83D518F2B22E89C004BCB59 /* Basket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basket.swift; sourceTree = "<group>"; };
+		F83D51A42B22ED96004BCB59 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		F83D51A72B22F671004BCB59 /* BugerMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugerMenu.swift; sourceTree = "<group>"; };
+		F83D51A92B230430004BCB59 /* FrozenCustarMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrozenCustarMenu.swift; sourceTree = "<group>"; };
+		F83D51AB2B230439004BCB59 /* DrinksMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksMenu.swift; sourceTree = "<group>"; };
+		F83D51AD2B230441004BCB59 /* BeerMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerMenu.swift; sourceTree = "<group>"; };
+		F83D51AF2B23079F004BCB59 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		F83D51B12B230814004BCB59 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		F8AABBEA2B20836300A6D9E1 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,15 +88,39 @@
 			isa = PBXGroup;
 			children = (
 				F83978562B1DDFF900F92A00 /* main.swift */,
+				F83D518A2B22E690004BCB59 /* Kiosk.swift */,
+				F83D518F2B22E89C004BCB59 /* Basket.swift */,
 				F839785D2B1DEF6300F92A00 /* ShackShackMenu.swift */,
+				F83D51AF2B23079F004BCB59 /* Order.swift */,
+				F83D51B12B230814004BCB59 /* Account.swift */,
+				F83D51A62B22F45F004BCB59 /* Product */,
+				F83D518C2B22E695004BCB59 /* Submenu */,
+				F83D51A42B22ED96004BCB59 /* Util.swift */,
+			);
+			path = Week3Task;
+			sourceTree = "<group>";
+		};
+		F83D518C2B22E695004BCB59 /* Submenu */ = {
+			isa = PBXGroup;
+			children = (
+				F83D51A72B22F671004BCB59 /* BugerMenu.swift */,
+				F83D51A92B230430004BCB59 /* FrozenCustarMenu.swift */,
+				F83D51AB2B230439004BCB59 /* DrinksMenu.swift */,
+				F83D51AD2B230441004BCB59 /* BeerMenu.swift */,
+			);
+			path = Submenu;
+			sourceTree = "<group>";
+		};
+		F83D51A62B22F45F004BCB59 /* Product */ = {
+			isa = PBXGroup;
+			children = (
 				F839785F2B1DEFD200F92A00 /* Buger.swift */,
 				F83978612B1DF1A900F92A00 /* FrozenCustar.swift */,
 				F83978632B1DF2CF00F92A00 /* Drinks.swift */,
 				F83978652B1DF44100F92A00 /* Beer.swift */,
-				F8AABBEA2B20836300A6D9E1 /* Menu.swift */,
-				F8A565D52B216414001CCDE9 /* Order.swift */,
+				F8AABBEA2B20836300A6D9E1 /* Product.swift */,
 			);
-			path = Week3Task;
+			path = Product;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,14 +181,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F83D518B2B22E690004BCB59 /* Kiosk.swift in Sources */,
 				F83978572B1DDFF900F92A00 /* main.swift in Sources */,
 				F83978662B1DF44100F92A00 /* Beer.swift in Sources */,
-				F8A565D62B216414001CCDE9 /* Order.swift in Sources */,
+				F83D51AC2B230439004BCB59 /* DrinksMenu.swift in Sources */,
+				F83D51A52B22ED96004BCB59 /* Util.swift in Sources */,
+				F83D51B22B230814004BCB59 /* Account.swift in Sources */,
+				F83D51A82B22F671004BCB59 /* BugerMenu.swift in Sources */,
 				F83978642B1DF2CF00F92A00 /* Drinks.swift in Sources */,
 				F839785E2B1DEF6400F92A00 /* ShackShackMenu.swift in Sources */,
-				F8AABBEB2B20836300A6D9E1 /* Menu.swift in Sources */,
+				F83D51AE2B230441004BCB59 /* BeerMenu.swift in Sources */,
+				F8AABBEB2B20836300A6D9E1 /* Product.swift in Sources */,
+				F83D51AA2B230430004BCB59 /* FrozenCustarMenu.swift in Sources */,
 				F83978602B1DEFD200F92A00 /* Buger.swift in Sources */,
+				F83D51B02B23079F004BCB59 /* Order.swift in Sources */,
 				F83978622B1DF1A900F92A00 /* FrozenCustar.swift in Sources */,
+				F83D51902B22E89C004BCB59 /* Basket.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
