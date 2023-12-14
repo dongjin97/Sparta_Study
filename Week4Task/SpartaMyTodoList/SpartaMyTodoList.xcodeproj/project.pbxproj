@@ -9,13 +9,15 @@
 /* Begin PBXBuildFile section */
 		F883C3CD2B26E84C004E94E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F883C3CC2B26E84C004E94E3 /* AppDelegate.swift */; };
 		F883C3CF2B26E84C004E94E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F883C3CE2B26E84C004E94E3 /* SceneDelegate.swift */; };
-		F883C3D12B26E84C004E94E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F883C3D02B26E84C004E94E3 /* ViewController.swift */; };
-		F883C3D42B26E84C004E94E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F883C3D22B26E84C004E94E3 /* Main.storyboard */; };
+		F883C3D12B26E84C004E94E3 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F883C3D02B26E84C004E94E3 /* MainVC.swift */; };
 		F883C3D62B26E84D004E94E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F883C3D52B26E84D004E94E3 /* Assets.xcassets */; };
 		F883C3D92B26E84D004E94E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F883C3D72B26E84D004E94E3 /* LaunchScreen.storyboard */; };
 		F883C3E42B26E84D004E94E3 /* SpartaMyTodoListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F883C3E32B26E84D004E94E3 /* SpartaMyTodoListTests.swift */; };
 		F883C3EE2B26E84D004E94E3 /* SpartaMyTodoListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F883C3ED2B26E84D004E94E3 /* SpartaMyTodoListUITests.swift */; };
 		F883C3F02B26E84D004E94E3 /* SpartaMyTodoListUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F883C3EF2B26E84D004E94E3 /* SpartaMyTodoListUITestsLaunchTests.swift */; };
+		F8D766692B26FCCC00F7B402 /* TodoListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D766682B26FCCC00F7B402 /* TodoListTVC.swift */; };
+		F8D7666C2B26FE2300F7B402 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F8D7666B2B26FE2300F7B402 /* SnapKit */; };
+		F8D7666E2B26FE3F00F7B402 /* TodoListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D7666D2B26FE3F00F7B402 /* TodoListModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +41,7 @@
 		F883C3C92B26E84C004E94E3 /* SpartaMyTodoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpartaMyTodoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F883C3CC2B26E84C004E94E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F883C3CE2B26E84C004E94E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F883C3D02B26E84C004E94E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F883C3D32B26E84C004E94E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F883C3D02B26E84C004E94E3 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		F883C3D52B26E84D004E94E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F883C3D82B26E84D004E94E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F883C3DA2B26E84D004E94E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +50,8 @@
 		F883C3E92B26E84D004E94E3 /* SpartaMyTodoListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpartaMyTodoListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F883C3ED2B26E84D004E94E3 /* SpartaMyTodoListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpartaMyTodoListUITests.swift; sourceTree = "<group>"; };
 		F883C3EF2B26E84D004E94E3 /* SpartaMyTodoListUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpartaMyTodoListUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F8D766682B26FCCC00F7B402 /* TodoListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListTVC.swift; sourceTree = "<group>"; };
+		F8D7666D2B26FE3F00F7B402 /* TodoListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8D7666C2B26FE2300F7B402 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,10 +103,11 @@
 		F883C3CB2B26E84C004E94E3 /* SpartaMyTodoList */ = {
 			isa = PBXGroup;
 			children = (
+				F8D7666D2B26FE3F00F7B402 /* TodoListModel.swift */,
+				F883C3D02B26E84C004E94E3 /* MainVC.swift */,
+				F8D766682B26FCCC00F7B402 /* TodoListTVC.swift */,
 				F883C3CC2B26E84C004E94E3 /* AppDelegate.swift */,
 				F883C3CE2B26E84C004E94E3 /* SceneDelegate.swift */,
-				F883C3D02B26E84C004E94E3 /* ViewController.swift */,
-				F883C3D22B26E84C004E94E3 /* Main.storyboard */,
 				F883C3D52B26E84D004E94E3 /* Assets.xcassets */,
 				F883C3D72B26E84D004E94E3 /* LaunchScreen.storyboard */,
 				F883C3DA2B26E84D004E94E3 /* Info.plist */,
@@ -143,6 +148,9 @@
 			dependencies = (
 			);
 			name = SpartaMyTodoList;
+			packageProductDependencies = (
+				F8D7666B2B26FE2300F7B402 /* SnapKit */,
+			);
 			productName = SpartaMyTodoList;
 			productReference = F883C3C92B26E84C004E94E3 /* SpartaMyTodoList.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +223,9 @@
 				Base,
 			);
 			mainGroup = F883C3C02B26E84C004E94E3;
+			packageReferences = (
+				F8D7666A2B26FE2300F7B402 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = F883C3CA2B26E84C004E94E3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,7 +244,6 @@
 			files = (
 				F883C3D92B26E84D004E94E3 /* LaunchScreen.storyboard in Resources */,
 				F883C3D62B26E84D004E94E3 /* Assets.xcassets in Resources */,
-				F883C3D42B26E84C004E94E3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +268,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F883C3D12B26E84C004E94E3 /* ViewController.swift in Sources */,
+				F8D7666E2B26FE3F00F7B402 /* TodoListModel.swift in Sources */,
+				F883C3D12B26E84C004E94E3 /* MainVC.swift in Sources */,
+				F8D766692B26FCCC00F7B402 /* TodoListTVC.swift in Sources */,
 				F883C3CD2B26E84C004E94E3 /* AppDelegate.swift in Sources */,
 				F883C3CF2B26E84C004E94E3 /* SceneDelegate.swift in Sources */,
 			);
@@ -297,14 +309,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F883C3D22B26E84C004E94E3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F883C3D32B26E84C004E94E3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F883C3D72B26E84D004E94E3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -442,7 +446,6 @@
 				INFOPLIST_FILE = SpartaMyTodoList/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -470,7 +473,6 @@
 				INFOPLIST_FILE = SpartaMyTodoList/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -602,6 +604,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F8D7666A2B26FE2300F7B402 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F8D7666B2B26FE2300F7B402 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F8D7666A2B26FE2300F7B402 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F883C3C12B26E84C004E94E3 /* Project object */;
 }
