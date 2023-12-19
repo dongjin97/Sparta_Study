@@ -11,6 +11,7 @@ import SnapKit
 
 class MainVC: UIViewController {
     var inputText : String = ""
+    // TodoList TitleLabel
     private lazy var todoListLabel : UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 20)
@@ -20,11 +21,13 @@ class MainVC: UIViewController {
         label.backgroundColor = .white
         return label
     }()
+    // TodoList TableView
     private lazy var todoLitsTableView : UITableView = {
         let tableView = UITableView(frame: .zero,style: .plain)
         tableView.register(TodoListTVC.self, forCellReuseIdentifier: TodoListTVC.identi)
         return tableView
     }()
+    // TodoList 추가하기 버튼
     private lazy var addTodoListBtn : UIButton = {
         let button = UIButton()
         let imgConfig = UIImage.SymbolConfiguration(pointSize: 50, weight: .light)

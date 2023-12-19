@@ -14,6 +14,7 @@ class TodoListDetailVC: UIViewController {
     var detailContents : String?
     var idx = 0
     var textViewPlaceHolder = "메모장 입니다."
+    // TodoList Title
     private lazy var titleLabel : UILabel = {
         let label = UILabel()
         label.text = detailTitle
@@ -21,6 +22,7 @@ class TodoListDetailVC: UIViewController {
         label.font = UIFont.systemFont(ofSize: 20)
         return label
     }()
+    // 이미지 추가 View
     private lazy var imgView : UIImageView = {
         let imgView = UIImageView()
         imgView.contentMode = .scaleAspectFit
@@ -31,6 +33,7 @@ class TodoListDetailVC: UIViewController {
         imgView.isUserInteractionEnabled = true
         return imgView
     }()
+    // 이미지 추가 Explain Label
     private lazy var imgTextLabel : UILabel = {
         let label = UILabel()
         label.textColor = .white
@@ -39,6 +42,7 @@ class TodoListDetailVC: UIViewController {
         label.textAlignment = .center
         return label
     }()
+    // 메모장 역할
     private lazy var contentTextView : UITextView = {
         let textView = UITextView()
         textView.layer.borderWidth = 1.0
@@ -64,8 +68,8 @@ class TodoListDetailVC: UIViewController {
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        testData[idx].img = imgView.image
-        testData[idx].contents = contentTextView.text
+        testData[idx].img = imgView.image // 이미지 저장
+        testData[idx].contents = contentTextView.text // 메모 내용 저장
     }
 }
 extension TodoListDetailVC{
@@ -100,6 +104,7 @@ extension TodoListDetailVC{
             
         }
     }
+    // PHPicker를 이용한 사진 선택
     @objc func touchAddPhoto(){
         var phpConfiguration = PHPickerConfiguration()
         phpConfiguration.selectionLimit = 1
@@ -108,12 +113,14 @@ extension TodoListDetailVC{
         picker.delegate = self
         self.present(picker, animated: true)
     }
+    // 저장된 이미지 데이터 불러오기
     func setImage(image : UIImage?){
         imgView.image = image
         if image != UIImage(systemName: "plus.app.fill"){
             imgTextLabel.isHidden = true
         }
     }
+    // 저장된 메모 데이터 불러오기
     func setTextView(content : String?){
         contentTextView.text = content
     }
@@ -129,14 +136,13 @@ extension TodoListDetailVC : PHPickerViewControllerDelegate{
                     self.imgTextLabel.isHidden = true
                     self.imgView.image = image as? UIImage
                 }
-               
             }
         }
     }
 }
 extension TodoListDetailVC : UITextViewDelegate{
+    // placeHolder를 위함
     func textViewDidBeginEditing(_ textView: UITextView){
-    
         if textView.text == textViewPlaceHolder{
             textView.text = nil
             textView.textColor = .black

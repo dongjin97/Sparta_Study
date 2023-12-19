@@ -62,8 +62,6 @@ class TodoListTVC: UITableViewCell {
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
     }
 }
 extension TodoListTVC{
@@ -89,6 +87,7 @@ extension TodoListTVC{
         pushBtn.setContentHuggingPriority(.init(rawValue: 750), for: .horizontal)
         titleLabel.setContentHuggingPriority(.init(rawValue: 700), for: .horizontal)
     }
+    // 현재 날짜 Date -> String format
     func setTodoList(_ model : TodoList){
         titleLabel.text = model.title
         let date = model.date
@@ -97,7 +96,7 @@ extension TodoListTVC{
         
         dateLabel.text = dateFormatter.string(from: date)
     }
-    
+    // TodoList 완료 & 미완료 체크박스
     @objc private func tapCheckBoxBtn(_ sender : UIButton){
         sender.isSelected.toggle()
         let attributedStringTitle = NSMutableAttributedString(string: titleLabel.text!)
