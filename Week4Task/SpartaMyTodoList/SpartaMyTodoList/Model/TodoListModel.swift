@@ -14,6 +14,4 @@ struct TodoList{
     var img : UIImage?
     var contents : String?
 }
-
 var testData : [TodoList] = []
-

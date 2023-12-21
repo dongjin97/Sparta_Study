@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F825A28A2B34445400041B32 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F825A2892B34445400041B32 /* StringExtension.swift */; };
+		F825A28C2B34445E00041B32 /* DateExtensino.swift in Sources */ = {isa = PBXBuildFile; fileRef = F825A28B2B34445E00041B32 /* DateExtensino.swift */; };
 		F8612DA32B316CC700F638F1 /* TodoListDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8612DA22B316CC700F638F1 /* TodoListDetailVC.swift */; };
 		F883C3CD2B26E84C004E94E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F883C3CC2B26E84C004E94E3 /* AppDelegate.swift */; };
 		F883C3CF2B26E84C004E94E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F883C3CE2B26E84C004E94E3 /* SceneDelegate.swift */; };
@@ -39,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F825A2892B34445400041B32 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		F825A28B2B34445E00041B32 /* DateExtensino.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensino.swift; sourceTree = "<group>"; };
 		F8612DA22B316CC700F638F1 /* TodoListDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListDetailVC.swift; sourceTree = "<group>"; };
 		F883C3C92B26E84C004E94E3 /* SpartaMyTodoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpartaMyTodoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F883C3CC2B26E84C004E94E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +86,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F825A2872B34431900041B32 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F8D766682B26FCCC00F7B402 /* TodoListTVC.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		F825A2882B3443AB00041B32 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F825A2892B34445400041B32 /* StringExtension.swift */,
+				F825A28B2B34445E00041B32 /* DateExtensino.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		F8612DA42B316CCD00F638F1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,8 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				F883C3D02B26E84C004E94E3 /* MainVC.swift */,
-				F8D766682B26FCCC00F7B402 /* TodoListTVC.swift */,
 				F8612DA22B316CC700F638F1 /* TodoListDetailVC.swift */,
+				F825A2872B34431900041B32 /* Cell */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -123,6 +144,7 @@
 		F883C3CB2B26E84C004E94E3 /* SpartaMyTodoList */ = {
 			isa = PBXGroup;
 			children = (
+				F825A2882B3443AB00041B32 /* Extension */,
 				F8612DA52B316CD800F638F1 /* VC */,
 				F8612DA42B316CCD00F638F1 /* Model */,
 				F883C3CC2B26E84C004E94E3 /* AppDelegate.swift */,
@@ -288,6 +310,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8D7666E2B26FE3F00F7B402 /* TodoListModel.swift in Sources */,
+				F825A28C2B34445E00041B32 /* DateExtensino.swift in Sources */,
+				F825A28A2B34445400041B32 /* StringExtension.swift in Sources */,
 				F883C3D12B26E84C004E94E3 /* MainVC.swift in Sources */,
 				F8D766692B26FCCC00F7B402 /* TodoListTVC.swift in Sources */,
 				F883C3CD2B26E84C004E94E3 /* AppDelegate.swift in Sources */,

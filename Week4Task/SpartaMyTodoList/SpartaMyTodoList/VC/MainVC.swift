@@ -11,7 +11,6 @@ import SnapKit
 
 class MainVC: UIViewController {
     var inputText : String = ""
-    // TodoList TitleLabel
     private lazy var todoListLabel : UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 20)
@@ -66,10 +65,13 @@ extension MainVC : UITableViewDelegate,UITableViewDataSource{
         }
         return cell
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: .random())
+    }
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete{
             testData.remove(at: indexPath.row)
-            todoLitsTableView.reloadData()
+            tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -110,7 +112,7 @@ extension MainVC{
             guard let title = alert.textFields?[0].text else {return}
             let currentDate = Date()
             testData.append(TodoList(title: title, isCompleted: false,date: currentDate))
-            self.todoLitsTableView.reloadData()
+            self.todoLitsTableView.insertRows(at: [IndexPath(row: testData.count-1, section: 0)], with: .right)
         }
         let cancelAction = UIAlertAction(title: "취소", style: .cancel)
         alert.addAction(cancelAction)

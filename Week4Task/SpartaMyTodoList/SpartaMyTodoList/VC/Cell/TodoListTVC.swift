@@ -59,7 +59,6 @@ class TodoListTVC: UITableViewCell {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
-    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
@@ -90,28 +89,19 @@ extension TodoListTVC{
     // 현재 날짜 Date -> String format
     func setTodoList(_ model : TodoList){
         titleLabel.text = model.title
-        let date = model.date
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
-        
-        dateLabel.text = dateFormatter.string(from: date)
+        dateLabel.text = model.date.changeString()
     }
     // TodoList 완료 & 미완료 체크박스
     @objc private func tapCheckBoxBtn(_ sender : UIButton){
         sender.isSelected.toggle()
-        let attributedStringTitle = NSMutableAttributedString(string: titleLabel.text!)
-        let attributedStringDate = NSMutableAttributedString(string: dateLabel.text!)
         if sender.isSelected {
             sender.setImage(UIImage(named: "CheckBox"), for: .normal)
-            [attributedStringTitle,attributedStringDate].forEach { attributedString in
-                attributedString.addAttribute(NSAttributedString.Key.strikethroughStyle,value: NSUnderlineStyle.single.rawValue, range: NSMakeRange(0,attributedString.length))
-            }
-            titleLabel.attributedText = attributedStringTitle
-            dateLabel.attributedText = attributedStringDate
+            titleLabel.attributedText = titleLabel.text?.strikeThroughString()
+            dateLabel.attributedText = dateLabel.text?.strikeThroughString()
         }else{
             sender.setImage(UIImage(named: "UnCheckBox"), for: .normal)
-            titleLabel.attributedText = attributedStringTitle
-            dateLabel.attributedText = attributedStringDate
+            titleLabel.attributedText = NSMutableAttributedString(string: titleLabel.text!)
+            dateLabel.attributedText = NSMutableAttributedString(string: dateLabel.text!)
         }
     }
     @objc private func tapPushBtn(){
