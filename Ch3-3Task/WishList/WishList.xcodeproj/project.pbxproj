@@ -17,6 +17,10 @@
 		F8DDD84E2B47E8070046EF88 /* WishListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DDD84D2B47E8070046EF88 /* WishListTests.swift */; };
 		F8DDD8582B47E8070046EF88 /* WishListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DDD8572B47E8070046EF88 /* WishListUITests.swift */; };
 		F8DDD85A2B47E8070046EF88 /* WishListUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DDD8592B47E8070046EF88 /* WishListUITestsLaunchTests.swift */; };
+		F8DDD8692B47EC360046EF88 /* WishListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DDD8682B47EC360046EF88 /* WishListViewController.swift */; };
+		F8DDD86B2B47EC600046EF88 /* RemoteProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DDD86A2B47EC600046EF88 /* RemoteProduct.swift */; };
+		F8DDD86D2B47F1690046EF88 /* GetDateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DDD86C2B47F1690046EF88 /* GetDateService.swift */; };
+		F8DDD8752B47FA390046EF88 /* WishTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DDD8742B47FA390046EF88 /* WishTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,10 @@
 		F8DDD8532B47E8070046EF88 /* WishListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WishListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8DDD8572B47E8070046EF88 /* WishListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListUITests.swift; sourceTree = "<group>"; };
 		F8DDD8592B47E8070046EF88 /* WishListUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F8DDD8682B47EC360046EF88 /* WishListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListViewController.swift; sourceTree = "<group>"; };
+		F8DDD86A2B47EC600046EF88 /* RemoteProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteProduct.swift; sourceTree = "<group>"; };
+		F8DDD86C2B47F1690046EF88 /* GetDateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDateService.swift; sourceTree = "<group>"; };
+		F8DDD8742B47FA390046EF88 /* WishTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,10 +111,12 @@
 			children = (
 				F8DDD8332B47E8060046EF88 /* AppDelegate.swift */,
 				F8DDD8352B47E8060046EF88 /* SceneDelegate.swift */,
-				F8DDD8372B47E8060046EF88 /* ViewController.swift */,
+				F8DDD86E2B47F3F80046EF88 /* Service */,
+				F8DDD8672B47EC140046EF88 /* VC */,
+				F8DDD8662B47EC0E0046EF88 /* Model */,
 				F8DDD8392B47E8060046EF88 /* Main.storyboard */,
-				F8DDD83F2B47E8070046EF88 /* Assets.xcassets */,
 				F8DDD8412B47E8070046EF88 /* LaunchScreen.storyboard */,
+				F8DDD83F2B47E8070046EF88 /* Assets.xcassets */,
 				F8DDD8442B47E8070046EF88 /* Info.plist */,
 				F8DDD83C2B47E8060046EF88 /* WishList.xcdatamodeld */,
 			);
@@ -128,6 +138,32 @@
 				F8DDD8592B47E8070046EF88 /* WishListUITestsLaunchTests.swift */,
 			);
 			path = WishListUITests;
+			sourceTree = "<group>";
+		};
+		F8DDD8662B47EC0E0046EF88 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F8DDD86A2B47EC600046EF88 /* RemoteProduct.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F8DDD8672B47EC140046EF88 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				F8DDD8372B47E8060046EF88 /* ViewController.swift */,
+				F8DDD8682B47EC360046EF88 /* WishListViewController.swift */,
+				F8DDD8742B47FA390046EF88 /* WishTableViewCell.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		F8DDD86E2B47F3F80046EF88 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				F8DDD86C2B47F1690046EF88 /* GetDateService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,10 +297,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8DDD8752B47FA390046EF88 /* WishTableViewCell.swift in Sources */,
 				F8DDD83E2B47E8060046EF88 /* WishList.xcdatamodeld in Sources */,
+				F8DDD8692B47EC360046EF88 /* WishListViewController.swift in Sources */,
 				F8DDD8382B47E8060046EF88 /* ViewController.swift in Sources */,
 				F8DDD8342B47E8060046EF88 /* AppDelegate.swift in Sources */,
 				F8DDD8362B47E8060046EF88 /* SceneDelegate.swift in Sources */,
+				F8DDD86D2B47F1690046EF88 /* GetDateService.swift in Sources */,
+				F8DDD86B2B47EC600046EF88 /* RemoteProduct.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

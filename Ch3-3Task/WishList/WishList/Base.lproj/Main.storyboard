@@ -1,24 +1,176 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="WishList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="B0e-JA-cjy">
+                                <rect key="frame" x="0.0" y="59.999999999999972" width="393" height="408.33333333333326"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yem-Sd-JQV">
+                                <rect key="frame" x="10" y="729.33333333333337" width="373" height="34.333333333333371"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QOc-aV-yhs">
+                                        <rect key="frame" x="0.0" y="0.0" width="181.66666666666666" height="34.333333333333336"/>
+                                        <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="위시 리스트 담기"/>
+                                        <connections>
+                                            <action selector="tapSaveWishList:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tgk-Sq-iac"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lgH-Vr-jDy">
+                                        <rect key="frame" x="191.66666666666663" y="0.0" width="181.33333333333337" height="34.333333333333336"/>
+                                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="다른 상품 보기"/>
+                                        <connections>
+                                            <action selector="tapSkipBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kgv-M1-XIp"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dwt-y9-aPI">
+                                <rect key="frame" x="10" y="773.66666666666663" width="373" height="34.333333333333371"/>
+                                <color key="backgroundColor" red="0.64705882349999999" green="0.64705882349999999" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="위시 리스트 보기"/>
+                                <connections>
+                                    <action selector="tapPresentWishList:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6uZ-W6-ZHV"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="RZ8-uK-KRD">
+                                <rect key="frame" x="15" y="483.33333333333326" width="363" height="96"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="상품명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ed-eq-fOX">
+                                        <rect key="frame" x="0.0" y="0.0" width="363" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="설명" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MFY-CI-FgZ">
+                                        <rect key="frame" x="0.0" y="42.000000000000057" width="363" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="가격" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fo7-UB-iEF">
+                                        <rect key="frame" x="0.0" y="78.000000000000057" width="363" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yem-Sd-JQV" secondAttribute="trailing" constant="10" id="7t3-SB-MKE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RZ8-uK-KRD" secondAttribute="trailing" constant="15" id="8fA-3Q-KK0"/>
+                            <constraint firstItem="RZ8-uK-KRD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="BpS-9j-GKc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Dwt-y9-aPI" secondAttribute="bottom" constant="10" id="Ox3-wg-CHf"/>
+                            <constraint firstItem="yem-Sd-JQV" firstAttribute="top" secondItem="RZ8-uK-KRD" secondAttribute="bottom" constant="150" id="Rzb-Ef-L9Y"/>
+                            <constraint firstItem="B0e-JA-cjy" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="SHD-hl-fA3"/>
+                            <constraint firstItem="Dwt-y9-aPI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="cS5-Gb-372"/>
+                            <constraint firstItem="RZ8-uK-KRD" firstAttribute="top" secondItem="B0e-JA-cjy" secondAttribute="bottom" constant="15" id="cwY-gz-6Fz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dwt-y9-aPI" secondAttribute="trailing" constant="10" id="fwP-mP-mgF"/>
+                            <constraint firstItem="B0e-JA-cjy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="1" id="jfX-sw-Fed"/>
+                            <constraint firstItem="Dwt-y9-aPI" firstAttribute="top" secondItem="yem-Sd-JQV" secondAttribute="bottom" constant="10" id="jxr-NQ-ZuI"/>
+                            <constraint firstItem="yem-Sd-JQV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="mD9-8c-L2U"/>
+                            <constraint firstItem="B0e-JA-cjy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wXl-NX-HDs"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imgView" destination="B0e-JA-cjy" id="rIZ-Lg-Vkr"/>
+                        <outlet property="productDescription" destination="MFY-CI-FgZ" id="xSE-3o-DKi"/>
+                        <outlet property="productName" destination="3ed-eq-fOX" id="g9j-Up-dEj"/>
+                        <outlet property="productPrice" destination="Fo7-UB-iEF" id="xcT-vg-9M8"/>
+                        <outlet property="savBtn" destination="QOc-aV-yhs" id="mD8-El-7fa"/>
+                        <outlet property="showBtn" destination="Dwt-y9-aPI" id="8nL-P6-dbD"/>
+                        <outlet property="skipBtn" destination="lgH-Vr-jDy" id="UJV-7f-E1b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-34.507042253521128"/>
+        </scene>
+        <!--Wish List View Controller-->
+        <scene sceneID="F7z-Um-CXb">
+            <objects>
+                <viewController storyboardIdentifier="WishListViewController" id="lp2-Tj-FpK" customClass="WishListViewController" customModule="WishList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="R70-Rq-JXo">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="t7B-8x-HLR">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableViewCellid" id="bPB-mm-w6f" customClass="WishTableViewCell" customModule="WishList" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="41.333332061767578"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bPB-mm-w6f" id="ZEE-vm-Kpo">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="41.333332061767578"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bht-EA-Mum">
+                                                    <rect key="frame" x="10" y="9.9999999999999982" width="373" height="21.333333333333329"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="bht-EA-Mum" firstAttribute="top" secondItem="ZEE-vm-Kpo" secondAttribute="top" constant="10" id="RAO-6D-exC"/>
+                                                <constraint firstItem="bht-EA-Mum" firstAttribute="leading" secondItem="ZEE-vm-Kpo" secondAttribute="leading" constant="10" id="UqI-h1-JTo"/>
+                                                <constraint firstAttribute="trailing" secondItem="bht-EA-Mum" secondAttribute="trailing" constant="10" id="WgR-QO-xBN"/>
+                                                <constraint firstAttribute="bottom" secondItem="bht-EA-Mum" secondAttribute="bottom" constant="10" id="m60-1Z-XZt"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="wishProductLabel" destination="bht-EA-Mum" id="9UJ-PY-pWG"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="u8q-mb-EzT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="t7B-8x-HLR" firstAttribute="top" secondItem="u8q-mb-EzT" secondAttribute="top" id="65Y-aD-u6g"/>
+                            <constraint firstItem="u8q-mb-EzT" firstAttribute="trailing" secondItem="t7B-8x-HLR" secondAttribute="trailing" id="Ean-tP-T2S"/>
+                            <constraint firstItem="t7B-8x-HLR" firstAttribute="leading" secondItem="u8q-mb-EzT" secondAttribute="leading" id="Qwg-MT-Aig"/>
+                            <constraint firstItem="u8q-mb-EzT" firstAttribute="bottom" secondItem="t7B-8x-HLR" secondAttribute="bottom" id="kZs-Qc-a6c"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="wishTableView" destination="t7B-8x-HLR" id="FhF-Tk-MtF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BSZ-gQ-FW9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="947" y="-29"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
