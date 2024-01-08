@@ -55,6 +55,7 @@ extension WishListViewController{
         if let getList = try? context.fetch(request){
             self.productList = getList
         }
+        print(self.productList)
     }
     private func deleteProdcutList(){
         guard let context = self.persistentContainer?.viewContext else { return }

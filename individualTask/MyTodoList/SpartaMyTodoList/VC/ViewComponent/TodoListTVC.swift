@@ -11,6 +11,7 @@ class TodoListTVC: UITableViewCell {
     static let identi = "TodoListTVCid"
     var tapCheckBtnClosure : ((Bool)->())?
     var tapUpdateBtnClosure : (()->())?
+    var indexPathRow = 0
     private lazy var upperStackView : UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
@@ -68,6 +69,11 @@ class TodoListTVC: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        titleLabel.attributedText = NSMutableAttributedString(string: titleLabel.text!)
+        dateLabel.attributedText = NSMutableAttributedString(string: dateLabel.text!)
+    }
 }
 extension TodoListTVC{
     func addContentView(){
@@ -93,10 +99,13 @@ extension TodoListTVC{
         updateBtn.setContentHuggingPriority(.init(750), for: .horizontal)
     }
     // 현재 날짜 Date -> String format
-    func setTodoList(_ model : TodoList){
+    func setTodoList(_ model : TodoListContent){
         titleLabel.text = model.title
         dateLabel.text = model.date.changeString()
         changeCheckBoxBtn(model.isCompleted)
+    }
+    func setIndexPath(_ model: Int){
+        self.indexPathRow = model
     }
  
     private func changeCheckBoxBtn(_ selected : Bool){

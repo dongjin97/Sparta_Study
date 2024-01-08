@@ -7,11 +7,11 @@
 
 import Foundation
 import UIKit
-//struct TodoList : Codable{
-//    var category : String
-//    var list : [TodoListContent]
-//}
-struct TodoList{
+struct TodoList : Codable{
+    var category : String
+    var list : [TodoListContent]
+}
+struct TodoListContent : Codable{
     var category : String
     var title : String
     var isCompleted : Bool
