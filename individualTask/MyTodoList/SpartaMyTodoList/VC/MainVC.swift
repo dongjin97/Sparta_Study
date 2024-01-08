@@ -10,14 +10,13 @@ import Foundation
 import SnapKit
 
 class MainVC: UIViewController {
-    var todoListArr = [TodoList]()
-    var toDoList = [TodoListContent](){
+    var todoListArr = [TodoList](){
         didSet{
             self.saveToDoList()
         }
     }
-    var indexPathRow = 0
     var indexPathSection = 0
+    var indexPathRow = 0
     private lazy var todoListLabel : UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 20)
@@ -73,11 +72,10 @@ extension MainVC : UITableViewDelegate,UITableViewDataSource{
         
         cell.tapCheckBtnClosure = { [unowned self] selected in
             todoListArr[indexPath.section].list[indexPath.row].isCompleted = selected
-            toDoList[indexPath.row].isCompleted = selected
         }
         cell.tapUpdateBtnClosure = {[unowned self] in
-            self.indexPathRow = indexPath.row
             self.indexPathSection = indexPath.section
+            self.indexPathRow = indexPath.row
             updateTodoList()
             
         }
@@ -89,7 +87,6 @@ extension MainVC : UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete{
             todoListArr[indexPath.section].list.remove(at: indexPath.row)
-            toDoList.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
             if todoListArr[indexPath.section].list.isEmpty{
                 todoListArr.remove(at: indexPath.section)
@@ -138,39 +135,13 @@ extension MainVC{
     }
     //MARK: - Data 관련 함수
     private func saveToDoList(){ // Data 저장
-        let data = self.toDoList.map{
-            [
-                "category" : $0.category,
-                "title" : $0.title,
-                "date" : $0.date,
-                "isCompleted" : $0.isCompleted
-            ] as [String : Any]
-        }
-        print(data)
-        UserDefaults.standard.set(data, forKey: "todolistKey")
-        UserDefaults.standard.synchronize() // 데이터를 쓰고나면 싱크 맞추기
+        TodoListManager.shared.saveTodoList(todoList: todoListArr)
     }
     private func loadToDoList(){ // 데이터 읽어오기
-        let userDefaults = UserDefaults.standard
-        guard let data = userDefaults.object(forKey: "todolistKey") as? [[String: Any]] else { return }
-
-        self.toDoList = data.compactMap {
-            guard let category = $0["category"] as? String,
-                  let title = $0["title"] as? String,
-                  let date = $0["date"] as? Date,
-                  let isCompleted = $0["isCompleted"] as? Bool else {
-                return nil
-            }
-            return TodoListContent(category: category, title: title, isCompleted: isCompleted, date: date)
-        }
-        for todo in toDoList{
-            
-            if let index = todoListArr.firstIndex(where: {$0.category == todo.category}){
-                todoListArr[index].list.append(todo)
-            }else{
-                todoListArr.append(TodoList(category: todo.category, list: [todo]))
-            }
-        }
+        self.todoListArr = TodoListManager.shared.loadTodoList()
+        print(todoListArr)
+   
+   
     }
     //MARK: - 기능 관련 함수
     // 할일 추가 함수
@@ -180,12 +151,11 @@ extension MainVC{
             guard let category = alert.textFields?[0].text else {return}
             guard let title = alert.textFields?[1].text else {return}
             let currentDate = Date()
-            let data = TodoListContent(category:category,title: title, isCompleted: false,date: currentDate)
-            self.toDoList.append(data)
-            if let index = self.todoListArr.firstIndex(where: {$0.category == data.category}){
+            let data = TodoListContent(title: title, isCompleted: false, date: currentDate)
+            if let index = self.todoListArr.firstIndex(where: {$0.category == category}){
                 self.todoListArr[index].list.append(data)
             }else{
-                self.todoListArr.append(TodoList(category: data.category, list: [data]))
+                self.todoListArr.append(TodoList(category: category, list: [data]))
             }
             self.todoLitsTableView.reloadData()
         }
@@ -198,23 +168,21 @@ extension MainVC{
         alert.addTextField {  title in
             title.placeholder = "할일을 입력하세요."
         }
-        
+
         self.present(alert, animated: true)
-        
+
     }
-    // 할일 수정 함수
+     //할일 수정 함수
     private func updateTodoList(){
         print(self.indexPathSection)
         print(self.indexPathRow)
-        
+
         let alert = UIAlertController(title: "수정", message: "내용을 입력하세요.", preferredStyle: .alert)
         let addAction = UIAlertAction(title: "수정", style: .default) { [self]  _ in
             let currentDate = Date()
             guard let title = alert.textFields?[0].text else {return}
-            let data = TodoListContent(category:toDoList[indexPathRow].category,title: title, isCompleted: self.toDoList[self.indexPathRow].isCompleted,date: currentDate)
-            
-            self.toDoList[indexPathRow] = data
-            self.todoListArr[indexPathSection].list[indexPathRow] = data
+            let updateData = TodoListContent(title: title, isCompleted: self.todoListArr[indexPathSection].list[indexPathRow].isCompleted, date: currentDate)
+            self.todoListArr[indexPathSection].list[indexPathRow] = updateData
             self.todoLitsTableView.reloadData()
         }
         let cancelAction = UIAlertAction(title: "취소", style: .cancel)
@@ -224,7 +192,7 @@ extension MainVC{
             textField.placeholder = "할일을 입력하세요."
         }
         self.present(alert, animated: true)
-        
+
     }
     
 }

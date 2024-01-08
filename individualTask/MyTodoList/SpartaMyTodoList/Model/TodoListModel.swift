@@ -12,7 +12,6 @@ struct TodoList : Codable{
     var list : [TodoListContent]
 }
 struct TodoListContent : Codable{
-    var category : String
     var title : String
     var isCompleted : Bool
     var date : Date
