@@ -29,19 +29,19 @@ class TodoListTVC: UITableViewCell {
         return stackView
     }()
     
-    private lazy var titleLabel : UILabel = {
+    private lazy var titleLabel : UILabel = { // 할일 Label
         let label = UILabel()
         label.textAlignment = .left
         label.font = UIFont.systemFont(ofSize: 15)
         return label
     }()
-    lazy var checkBoxBtn : UIButton = {
+    lazy var checkBoxBtn : UIButton = { // 체크박스 Btn
         let btn = UIButton()
         btn.setImage(UIImage(named: "UnCheckBox"), for: .normal)
         btn.addTarget(self, action: #selector(tapCheckBoxBtn(_ :)), for: .touchUpInside)
         return btn
     }()
-    private lazy var updateBtn : UIButton = {
+    private lazy var updateBtn : UIButton = { // 수정 Btn
         let btn = UIButton()
         btn.setTitle("수정", for: .normal)
         btn.titleLabel?.textColor = .white
@@ -52,7 +52,7 @@ class TodoListTVC: UITableViewCell {
         btn.addTarget(self, action: #selector(tapUpdatBtn), for: .touchUpInside)
         return btn
     }()
-    private lazy var dateLabel : UILabel = {
+    private lazy var dateLabel : UILabel = { // 날짜 Btn
         let label = UILabel()
         label.textAlignment = .right
         label.font = UIFont.systemFont(ofSize: 15)
@@ -69,14 +69,15 @@ class TodoListTVC: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-    override func prepareForReuse() {
+    override func prepareForReuse() { // Cell 재사용시 초기화 cell
         super.prepareForReuse()
+        checkBoxBtn.setImage(UIImage(named: "UnCheckBox"), for: .normal)
         titleLabel.attributedText = NSMutableAttributedString(string: titleLabel.text!)
         dateLabel.attributedText = NSMutableAttributedString(string: dateLabel.text!)
     }
 }
 extension TodoListTVC{
-    func addContentView(){
+    func addContentView(){ // UI추가
         contentView.addSubview(upperStackView)
         upperStackView.addArrangedSubview(innerStackView)
         upperStackView.addArrangedSubview(dateLabel)
@@ -84,7 +85,7 @@ extension TodoListTVC{
         innerStackView.addArrangedSubview(titleLabel)
         innerStackView.addArrangedSubview(updateBtn)
     }
-    func setAutoLayout(){
+    func setAutoLayout(){ // 오토레이아웃 설정
         upperStackView.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(15)
             make.left.equalToSuperview().offset(15)
@@ -98,17 +99,17 @@ extension TodoListTVC{
         titleLabel.setContentHuggingPriority(.init(rawValue: 700), for: .horizontal)
         updateBtn.setContentHuggingPriority(.init(750), for: .horizontal)
     }
-    // 현재 날짜 Date -> String format
-    func setTodoList(_ model : TodoListContent){
+
+    func setTodoList(_ model : TodoListContent){ // 할일 Cell Data 설정
         titleLabel.text = model.title
-        dateLabel.text = model.date.changeString()
+        dateLabel.text = model.date.changeString()     // 현재 날짜 Date -> String format
         changeCheckBoxBtn(model.isCompleted)
     }
     func setIndexPath(_ model: Int){
         self.indexPathRow = model
     }
  
-    private func changeCheckBoxBtn(_ selected : Bool){
+    private func changeCheckBoxBtn(_ selected : Bool){ // 선택여부에 따른 체크박스 UI변경
         if selected {
             checkBoxBtn.setImage(UIImage(named: "CheckBox"), for: .normal)
             titleLabel.attributedText = titleLabel.text?.strikeThroughString()
@@ -119,14 +120,14 @@ extension TodoListTVC{
             dateLabel.attributedText = NSMutableAttributedString(string: dateLabel.text!)
         }
     }
-    // TodoList 완료 & 미완료 체크박스
-    @objc private func tapCheckBoxBtn(_ sender : UIButton){
+    
+    @objc private func tapCheckBoxBtn(_ sender : UIButton){ // TodoList 완료 & 미완료 체크박스 액션
         sender.isSelected.toggle()
         tapCheckBtnClosure?(sender.isSelected)
         changeCheckBoxBtn(sender.isSelected)
     }
-    // 수정 버튼
-    @objc private func tapUpdatBtn(){
+
+    @objc private func tapUpdatBtn(){    // 수정 버튼
         tapUpdateBtnClosure?()
     }
 }

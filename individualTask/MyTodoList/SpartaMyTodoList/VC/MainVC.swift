@@ -12,11 +12,12 @@ import SnapKit
 class MainVC: UIViewController {
     var todoListArr = [TodoList](){
         didSet{
-            self.saveToDoList()
+            self.saveToDoList() // ToList값 변경된 직후 해당 함수 호출로 데이터 저장
         }
     }
-    var indexPathSection = 0
-    var indexPathRow = 0
+    var indexPathSection = 0 // 수정을 위한 Section 저장
+    var indexPathRow = 0 // 수정을 위한 Row저장
+    
     private lazy var todoListLabel : UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 20)
@@ -57,7 +58,7 @@ class MainVC: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.saveToDoList()
+        self.saveToDoList() // View가 사라지기전 한번더 저장
     }
 }
 extension MainVC : UITableViewDelegate,UITableViewDataSource{
@@ -68,12 +69,12 @@ extension MainVC : UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TodoListTVC.identi, for: indexPath) as? TodoListTVC else{ return UITableViewCell()}
-        cell.setTodoList(todoListArr[indexPath.section].list[indexPath.row])
+        cell.setTodoList(todoListArr[indexPath.section].list[indexPath.row]) // Cell Data 설정
         
         cell.tapCheckBtnClosure = { [unowned self] selected in
-            todoListArr[indexPath.section].list[indexPath.row].isCompleted = selected
+            todoListArr[indexPath.section].list[indexPath.row].isCompleted = selected // checkBox 버튼 액션
         }
-        cell.tapUpdateBtnClosure = {[unowned self] in
+        cell.tapUpdateBtnClosure = {[unowned self] in // 수정 버튼 액션
             self.indexPathSection = indexPath.section
             self.indexPathRow = indexPath.row
             updateTodoList()
@@ -81,14 +82,11 @@ extension MainVC : UITableViewDelegate,UITableViewDataSource{
         }
         return cell
     }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: .random())
-    }
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete{
+        if editingStyle == .delete{ // 스와이프해서 삭제 하는 기능
             todoListArr[indexPath.section].list.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
-            if todoListArr[indexPath.section].list.isEmpty{
+            if todoListArr[indexPath.section].list.isEmpty{ // 섹션에 할일 없을경우 해당 섹션도 삭제하기 위함
                 todoListArr.remove(at: indexPath.section)
                 tableView.deleteSections(IndexSet(arrayLiteral: indexPath.section), with: .fade)
             }
@@ -97,26 +95,26 @@ extension MainVC : UITableViewDelegate,UITableViewDataSource{
     //MARK: - Header
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         guard let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: TodoListHeader.identi) as? TodoListHeader else {return UIView()}
-        headerView.setCategoty(model: todoListArr[section].category)
+        headerView.setCategoty(model: todoListArr[section].category) // 카테고리 설정
         return headerView
     }
-    func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int { // 섹션 개수
         return todoListArr.count
     }
     
 }
 extension MainVC{
     //MARK: - View관련 함수
-    private func setTableView(){
+    private func setTableView(){ // TalbeView Configure
         todoLitsTableView.dataSource = self
         todoLitsTableView.delegate = self
     }
-    private func addSubViews(){
+    private func addSubViews(){ // UI 추가함수
         view.addSubview(todoListLabel)
         view.addSubview(todoLitsTableView)
         view.addSubview(addTodoListBtn)
     }
-    private func setAutoLayout(){
+    private func setAutoLayout(){ // 오토레이아웃 설정 함수
         todoListLabel.snp.makeConstraints { make in
             make.top.equalTo(self.view.safeAreaLayoutGuide)
             make.left.equalToSuperview().offset(10)
@@ -148,24 +146,24 @@ extension MainVC{
     @objc func addTodoList(){
         let alert = UIAlertController(title: "추가", message: "추가할 내용을 입력하세요.", preferredStyle: .alert)
         let addAction = UIAlertAction(title: "등록", style: .default) {  _ in
-            guard let category = alert.textFields?[0].text else {return}
-            guard let title = alert.textFields?[1].text else {return}
+            guard let category = alert.textFields?[0].text else {return} // 카테고리 테스트 픽드 Text
+            guard let title = alert.textFields?[1].text else {return} // 할일 텍스트 필드 Text
             let currentDate = Date()
-            let data = TodoListContent(title: title, isCompleted: false, date: currentDate)
-            if let index = self.todoListArr.firstIndex(where: {$0.category == category}){
-                self.todoListArr[index].list.append(data)
+            let data = TodoListContent(title: title, isCompleted: false, date: currentDate) // 할일로 구성 된 data
+            if let index = self.todoListArr.firstIndex(where: {$0.category == category}){ // 할일에 대한 카테고리를 찾아서 해당 카테고리 있을경우
+                self.todoListArr[index].list.append(data) // 카테고리 Section에 추가
             }else{
-                self.todoListArr.append(TodoList(category: category, list: [data]))
+                self.todoListArr.append(TodoList(category: category, list: [data])) // 없을경우 새로운 카테고리 생성및 할일 추가
             }
             self.todoLitsTableView.reloadData()
         }
         let cancelAction = UIAlertAction(title: "취소", style: .cancel)
         alert.addAction(cancelAction)
         alert.addAction(addAction)
-        alert.addTextField {  category in
+        alert.addTextField {  category in // 카테고리 입력 place Holder
             category.placeholder = "카테고리를 입력하세요."
         }
-        alert.addTextField {  title in
+        alert.addTextField {  title in // 할일 입력 place Holder
             title.placeholder = "할일을 입력하세요."
         }
 
@@ -173,16 +171,13 @@ extension MainVC{
 
     }
      //할일 수정 함수
-    private func updateTodoList(){
-        print(self.indexPathSection)
-        print(self.indexPathRow)
-
+    private func updateTodoList(){ // 수정할경우 카테고리는 수정 불가능 할일만 수정 가능 하게 구성
         let alert = UIAlertController(title: "수정", message: "내용을 입력하세요.", preferredStyle: .alert)
         let addAction = UIAlertAction(title: "수정", style: .default) { [self]  _ in
             let currentDate = Date()
-            guard let title = alert.textFields?[0].text else {return}
+            guard let title = alert.textFields?[0].text else {return}  // 할일 텍스트 필드 Text
             let updateData = TodoListContent(title: title, isCompleted: self.todoListArr[indexPathSection].list[indexPathRow].isCompleted, date: currentDate)
-            self.todoListArr[indexPathSection].list[indexPathRow] = updateData
+            self.todoListArr[indexPathSection].list[indexPathRow] = updateData // 수정된 데이터 대입
             self.todoLitsTableView.reloadData()
         }
         let cancelAction = UIAlertAction(title: "취소", style: .cancel)
