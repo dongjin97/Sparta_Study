@@ -60,6 +60,7 @@ extension ViewController{
                 self.productDescription.text = productData.description
                 self.productPrice.text = "\(productData.price)$"
             }
+            print(productData.thumbnail)
             DispatchQueue.global().async { [weak self] in
                 if let imgData = try? Data(contentsOf: productData.thumbnail), let image = UIImage(data: imgData){
                     DispatchQueue.main.async {

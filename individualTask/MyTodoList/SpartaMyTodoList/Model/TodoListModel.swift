@@ -17,3 +17,5 @@ struct TodoListContent : Codable{ // TodoList 하나에 대한 구조
     var isCompleted : Bool
     var date : Date
 }
+
+

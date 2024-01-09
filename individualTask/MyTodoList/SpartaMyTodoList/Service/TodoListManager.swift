@@ -16,7 +16,6 @@ class TodoListManager { // Struct같은 경우 UserDefaults사용시 아카이�
                UserDefaults.standard.set(encodedData, forKey: todoListKey)
            }
        }
-
        func loadTodoList() -> [TodoList] {
            let decoder = JSONDecoder()
            if let savedData = UserDefaults.standard.data(forKey: todoListKey),
