@@ -15,7 +15,7 @@ class TodoListVC: UIViewController {
             self.saveToDoList() // ToList값 변경된 직후 해당 함수 호출로 데이터 저장
         }
     }
-//MARK: - 수정을 위한 변수
+    //MARK: - 수정을 위한 변수
     var indexPathSection = 0 // 수정을 위한 Section 저장
     var indexPathRow = 0 // 수정을 위한 Row저장
     
@@ -59,12 +59,12 @@ class TodoListVC: UIViewController {
 extension TodoListVC : UITableViewDelegate,UITableViewDataSource{
     //MARK: - CEll
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return todoListArr[section].list.count
+        return todoListArr[section].list.count // cell개수
+        
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TodoListTVC.identi, for: indexPath) as? TodoListTVC else{ return UITableViewCell()}
         cell.setTodoList(todoListArr[indexPath.section].list[indexPath.row]) // Cell Data 설정
-        
         cell.tapCheckBtnClosure = { [unowned self] selected in
             todoListArr[indexPath.section].list[indexPath.row].isCompleted = selected // checkBox 버튼 액션
             saveToDoList()

@@ -55,24 +55,37 @@ extension PetVC{
     
     private func getCatData(){ // 데이터 불러 오는 함수
         CatDataManager.shared.getCatData { catData in
-            let catData = catData[0]
-            DispatchQueue.main.async {
-                self.imgView.image = UIImage(systemName: "photo")
-            }
-            if let url = URL(string: catData.url){
-                DispatchQueue.global().async { [weak self] in
-                    if let data = try? Data(contentsOf: url) {
-                        if let image = UIImage(data: data) {
-                            DispatchQueue.main.async {
-                                self?.imgView.image = image
-                                self?.imgView.snp.updateConstraints { make in
-                                    make.height.equalTo(catData.height)
-                                    make.width.equalTo(catData.width)
-                                }
-                            }
+            switch catData {
+            case .success(let data):
+                guard let imgAPI = data.first else {return}
+
+                DispatchQueue.main.async {
+                    self.imgView.image = UIImage(systemName: "photo")
+                }
+                DispatchQueue.main.async {
+                    if CGFloat(imgAPI.width) > UIScreen.main.bounds.width {
+                        let ratio = UIScreen.main.bounds.width / CGFloat(imgAPI.width)
+                        let width = CGFloat(imgAPI.width) * ratio
+                        let height = CGFloat(imgAPI.height) * width / CGFloat(imgAPI.width)
+                        self.imgView.snp.updateConstraints { make in
+                            make.height.equalTo(height)
+                            make.width.equalTo(width)
+                        }
+                    }else{
+                        self.imgView.snp.updateConstraints { make in
+                            make.height.equalTo(imgAPI.height)
+                            make.width.equalTo(imgAPI.width)
                         }
                     }
+                    if let url = URL(string: imgAPI.url){
+                        self.imgView.load(url: url)
+                    }
                 }
+            case .failure(let error):
+                DispatchQueue.main.async {
+                    self.title = error.localizedDescription
+                    self.imgView.image = UIImage(systemName: "x.circle")
+                }   
             }
         }
     }

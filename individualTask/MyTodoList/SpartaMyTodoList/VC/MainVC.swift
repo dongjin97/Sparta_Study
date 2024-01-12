@@ -75,6 +75,7 @@ extension MainVC{
             make.centerX.equalToSuperview()
             make.bottom.equalTo(self.view.safeAreaLayoutGuide).offset(-150)
         }
+        
     }
     private func getHomeImg(){ // URL -> UIImage 함수
         if let url = URL(string: "https://spartacodingclub.kr/css/images/scc-og.jpg") {

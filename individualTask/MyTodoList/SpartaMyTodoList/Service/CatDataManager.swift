@@ -8,26 +8,31 @@
 import Foundation
 class CatDataManager{
     static let shared = CatDataManager()
-    func getCatData(completion: @escaping([CatData]) -> Void){
+    func getCatData(completion: @escaping (Result<[CatData],Error>) -> Void){
         guard let url = URL(string: "https://api.thecatapi.com/v1/images/search")else {
             print("Url error")
             return
         }
         URLSession(configuration: .default).dataTask(with: url) { data, response, error in
             if let error = error{
-                print("Error:\(error)")
-            }else if let data = data{
-                do {
-                    let CatData : [CatData] = try JSONDecoder().decode([CatData].self, from: data) // 데이터 디코딩
-                    completion(CatData) // Completion @escaping
-                }catch{
-                    print("Decoding Error") // 디코딩 에러발생시 표출
-                    print("\(String(describing: error.localizedDescription))")
-                }
+                print("Error:\(error.localizedDescription)")
+                completion(.failure(NetworkError.unKnown(error.localizedDescription)))
             }
-            if let httpResponse = response as? HTTPURLResponse {
-                print("HTTP Status Code: \(httpResponse.statusCode)") //response 상태코드
+            guard let httpResponse = response as? HTTPURLResponse,(200...299).contains(httpResponse.statusCode) else{
+                print("Error : invalid response")
+                completion(.failure(NetworkError.invalidResponse))
+                return
             }
+            guard let data = data else{
+                print("Error : no data")
+                completion(.failure(NetworkError.emptyResponse))
+                return
+            }
+            guard let catData = try? JSONDecoder().decode([CatData].self, from: data) else{
+                completion(.failure(NetworkError.decodeError))
+                return
+            }
+            completion(.success(catData))
         }.resume()
     }
     

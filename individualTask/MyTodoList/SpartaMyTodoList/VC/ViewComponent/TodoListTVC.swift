@@ -124,7 +124,7 @@ extension TodoListTVC{
     @objc private func tapCheckBoxBtn(_ sender : UIButton){ // TodoList 완료 & 미완료 체크박스 액션
         sender.isSelected.toggle()
         tapCheckBtnClosure?(sender.isSelected)
-        changeCheckBoxBtn(sender.isSelected)
+        changeCheckBoxBtn(sender.isSelected) //
     }
 
     @objc private func tapUpdatBtn(){    // 수정 버튼
