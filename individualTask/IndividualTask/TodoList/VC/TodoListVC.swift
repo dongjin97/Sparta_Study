@@ -36,7 +36,7 @@ class TodoListVC: UIViewController {
         return tableView
     }()
     // TodoList 추가하기 버튼
-    private lazy var addTodoListBtn : UIButton = {
+    private lazy var addTodoListButton : UIButton = {
         let button = UIButton()
         let imgConfig = UIImage.SymbolConfiguration(pointSize: 50, weight: .light)
         button.setImage(UIImage(systemName: "plus.circle.fill",withConfiguration: imgConfig), for: .normal)
@@ -65,11 +65,11 @@ extension TodoListVC : UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TodoListTVC.identi, for: indexPath) as? TodoListTVC else{ return UITableViewCell()}
         cell.setTodoList(todoListArr[indexPath.section].list[indexPath.row]) // Cell Data 설정
-        cell.tapCheckBtnClosure = { [unowned self] selected in
+        cell.tapCheckButtonClosure = { [unowned self] selected in
             todoListArr[indexPath.section].list[indexPath.row].isCompleted = selected // checkBox 버튼 액션
             saveToDoList()
         }
-        cell.tapUpdateBtnClosure = {[unowned self] in // 수정 버튼 액션
+        cell.tapUpdateButtonClosure = {[unowned self] in // 수정 버튼 액션
             self.indexPathSection = indexPath.section
             self.indexPathRow = indexPath.row
             updateTodoList()
@@ -106,9 +106,7 @@ extension TodoListVC{
         todoLitsTableView.delegate = self
     }
     private func addSubViews(){ // UI 추가함수
-        view.addSubview(todoListLabel)
-        view.addSubview(todoLitsTableView)
-        view.addSubview(addTodoListBtn)
+        self.view.addSubViews([todoListLabel,todoLitsTableView,addTodoListButton])
     }
     private func setAutoLayout(){ // 오토레이아웃 설정 함수
         todoListLabel.snp.makeConstraints { make in
@@ -120,7 +118,7 @@ extension TodoListVC{
             make.top.equalTo(todoListLabel.snp.bottom).offset(10)
             make.bottom.left.right.equalTo(self.view.safeAreaLayoutGuide)
         }
-        addTodoListBtn.snp.makeConstraints { make in
+        addTodoListButton.snp.makeConstraints { make in
             make.right.equalTo(self.view.snp.right).offset(-30)
             make.bottom.equalTo(self.view.safeAreaLayoutGuide).offset(-30)
         }

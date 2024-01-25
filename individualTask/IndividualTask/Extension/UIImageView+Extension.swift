@@ -1,8 +1,8 @@
 //
-//  ExtesionUIImageView.swift
-//  SpartaMyTodoList
+//  UIImageView+Extension.swift
+//  IndividualTask
 //
-//  Created by 원동진 on 2024/01/09.
+//  Created by 원동진 on 2024/01/25.
 //
 
 import Foundation

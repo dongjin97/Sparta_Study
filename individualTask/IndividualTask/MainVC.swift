@@ -8,46 +8,55 @@
 import UIKit
 import SnapKit
 class MainVC: UIViewController {
+    
     private lazy var spartaImgView : UIImageView = { // 스파르타 이미지
         let imgView = UIImageView()
         imgView.contentMode = .scaleAspectFill
         return imgView
     }()
-    private lazy var pushTodoListVCBtn : UIButton = { // 할일목록 push 버튼
-        let btn = UIButton()
-        btn.setTitle("할일 확인하기", for: .normal)
-        btn.setTitleColor(.white, for: .normal)
-        btn.backgroundColor = UIColor(named: "PrimaryColor")
-        btn.layer.cornerRadius = 10
-        btn.layer.masksToBounds = true
-        btn.addTarget(self, action: #selector(tapTodoListVC), for: .touchUpInside)
-        return btn
+    private lazy var buttonStackView : UIStackView = {
+       let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.alignment = .fill
+        stackView.distribution = .equalSpacing
+        stackView.spacing = 20
+        return stackView
     }()
-    private lazy var completedTodoListVCBtn : UIButton = { // 완료된 할일 목록 push 버튼
-        let btn = UIButton()
-        btn.setTitle("완료한일 보기", for: .normal)
-        btn.setTitleColor(.white, for: .normal)
-        btn.backgroundColor = UIColor(named: "PrimaryColor")
-        btn.layer.cornerRadius = 10
-        btn.layer.masksToBounds = true
-        btn.addTarget(self, action: #selector(tapTodoListCompletedVC), for: .touchUpInside)
-        return btn
+    private lazy var pushTodoListVCbutton : UIButton = { // 할일목록 push 버튼
+        let button = UIButton()
+        button.setTitle("할일 확인하기", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = UIColor(named: "PrimaryColor")
+        button.layer.cornerRadius = 10
+        button.layer.masksToBounds = true
+        button.addTarget(self, action: #selector(tapTodoListVC), for: .touchUpInside)
+        return button
     }()
-    private lazy var pushPetVCBtn : UIButton = { // PetVC 로 Push 버튼
-       let btn = UIButton()
-        btn.setTitle("🐈", for: .normal)
-        btn.addTarget(self, action: #selector(tapPushPetVC), for: .touchUpInside)
-        return btn
+    private lazy var completedTodoListVCbutton : UIButton = { // 완료된 할일 목록 push 버튼
+        let button = UIButton()
+        button.setTitle("완료한일 보기", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = UIColor(named: "PrimaryColor")
+        button.layer.cornerRadius = 10
+        button.layer.masksToBounds = true
+        button.addTarget(self, action: #selector(tapTodoListCompletedVC), for: .touchUpInside)
+        return button
+    }()
+    private lazy var pushPetVCbutton : UIButton = { // PetVC 로 Push 버튼
+       let button = UIButton()
+        button.setTitle("🐈", for: .normal)
+        button.addTarget(self, action: #selector(tapPushPetVC), for: .touchUpInside)
+        return button
     }()
     private lazy var profileDesignVCButton : UIButton = { // PetVC 로 Push 버튼
-       let btn = UIButton()
-        btn.setTitle("ProfileDesignViewController", for: .normal)
-        btn.setTitleColor(.white, for: .normal)
-        btn.backgroundColor = UIColor(named: "PrimaryColor")
-        btn.layer.cornerRadius = 10
-        btn.layer.masksToBounds = true
-        btn.addTarget(self, action: #selector(tapPresentProfileDesignVCButton), for: .touchUpInside)
-        return btn
+       let button = UIButton()
+        button.setTitle("ProfileDesignViewController", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = UIColor(named: "PrimaryColor")
+        button.layer.cornerRadius = 10
+        button.layer.masksToBounds = true
+        button.addTarget(self, action: #selector(tapPresentProfileDesignVCButton), for: .touchUpInside)
+        return button
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,31 +71,18 @@ extension MainVC{
 //MARK: - View 관련함수
     private func addSubViews(){
         self.view.addSubview(spartaImgView)
-        self.view.addSubview(pushTodoListVCBtn)
-        self.view.addSubview(completedTodoListVCBtn)
-        self.view.addSubview(pushPetVCBtn)
-        self.view.addSubview(profileDesignVCButton)
+        self.view.addSubview(buttonStackView)
+        buttonStackView.addStackSubViews([pushTodoListVCbutton,completedTodoListVCbutton,pushPetVCbutton,profileDesignVCButton])
     }
     private func setAutoLayout(){
         spartaImgView.snp.makeConstraints { make in
-            make.top.equalTo(self.view.safeAreaLayoutGuide).offset(50)
-            make.left.equalTo(self.view.safeAreaLayoutGuide).offset(100)
-            make.right.equalTo(self.view.safeAreaLayoutGuide).offset(-100)
+            make.top.equalTo(self.view.safeAreaLayoutGuide).offset(150)
+            make.centerX.equalToSuperview()
+            make.height.equalTo(150)
+            make.width.equalTo(150)
         }
-        pushTodoListVCBtn.snp.makeConstraints { make in
+        buttonStackView.snp.makeConstraints { make in
             make.top.equalTo(spartaImgView.snp.bottom).offset(50)
-            make.centerX.equalToSuperview()
-        }
-        completedTodoListVCBtn.snp.makeConstraints { make in
-            make.top.equalTo(pushTodoListVCBtn.snp.bottom).offset(50)
-            make.centerX.equalToSuperview()
-        }
-        pushPetVCBtn.snp.makeConstraints { make in
-            make.top.equalTo(completedTodoListVCBtn.snp.bottom).offset(50)
-            make.centerX.equalToSuperview()
-        }
-        profileDesignVCButton.snp.makeConstraints { make in
-            make.top.equalTo(pushPetVCBtn.snp.bottom).offset(50)
             make.centerX.equalToSuperview()
             make.bottom.equalTo(self.view.safeAreaLayoutGuide).offset(-150)
         }

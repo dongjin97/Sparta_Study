@@ -48,9 +48,7 @@ class TodoListCompletedTVC: UITableViewCell {
 extension TodoListCompletedTVC{
     private func addContentView(){ // UI추가
         contentView.addSubview(upperStackView)
-        upperStackView.addArrangedSubview(titleLabel)
-        upperStackView.addArrangedSubview(dateLabel)
-        
+        upperStackView.addStackSubViews([titleLabel,dateLabel])
     }
     private func setAutoLayout(){ // 오토레이아웃 설정
         upperStackView.snp.makeConstraints { make in
@@ -59,7 +57,7 @@ extension TodoListCompletedTVC{
             make.right.equalToSuperview().offset(-15)
             make.bottom.equalToSuperview().offset(-15)
         }
-        titleLabel.setContentHuggingPriority(.init(rawValue: 700), for: .horizontal)
+        titleLabel.setContentHuggingPriority(.init(rawValue: 749), for: .horizontal)
         dateLabel.setContentHuggingPriority(.init(750), for: .horizontal)
     }
     func setTodoList(model : TodoListContentComplted){

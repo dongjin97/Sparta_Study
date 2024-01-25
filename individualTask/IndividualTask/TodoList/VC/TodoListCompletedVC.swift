@@ -64,8 +64,7 @@ extension TodoListCompletedVC{
         todoLitsTableView.delegate = self
     }
     private func addSubViews(){ // UI 추가함수
-        view.addSubview(todoListLabel)
-        view.addSubview(todoLitsTableView)
+        self.view.addSubViews([todoListLabel,todoLitsTableView])
     }
     private func setAutoLayout(){ // 오토레이아웃 설정 함수
         todoListLabel.snp.makeConstraints { make in

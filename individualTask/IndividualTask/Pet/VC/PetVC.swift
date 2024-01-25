@@ -14,16 +14,16 @@ class PetVC: UIViewController {
         let imgView = UIImageView()
         return imgView
     }()
-    private lazy var refreshBtn : UIButton = { // 새로고침 버튼
-        let btn = UIButton()
-        btn.setTitle("", for: .normal)
-        btn.setImage(UIImage(systemName: "arrow.clockwise"), for: .normal)
-        btn.tintColor = .black
-        btn.backgroundColor = .lightGray
-        btn.layer.cornerRadius = 10
-        btn.layer.masksToBounds = true
-        btn.addTarget(self, action: #selector(tapRefreshAction), for: .touchUpInside)
-        return btn
+    private lazy var refreshButton : UIButton = { // 새로고침 버튼
+        let button = UIButton()
+        button.setTitle("", for: .normal)
+        button.setImage(UIImage(systemName: "arrow.clockwise"), for: .normal)
+        button.tintColor = .black
+        button.backgroundColor = .lightGray
+        button.layer.cornerRadius = 10
+        button.layer.masksToBounds = true
+        button.addTarget(self, action: #selector(tapRefreshAction), for: .touchUpInside)
+        return button
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,8 +36,7 @@ class PetVC: UIViewController {
 }
 extension PetVC{
     private func addSubView(){ // UI 추가
-        self.view.addSubview(imgView)
-        self.view.addSubview(refreshBtn)
+        self.view.addSubViews([imgView,refreshButton])
     }
     private func setAutoLayout(){ // 오토레이 아웃 설정
         imgView.snp.makeConstraints { make in
@@ -45,7 +44,7 @@ extension PetVC{
             make.width.equalTo(300)
             make.height.equalTo(300)
         }
-        refreshBtn.snp.makeConstraints { make in
+        refreshButton.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.top.equalTo(self.view.safeAreaLayoutGuide).offset(50)
             make.height.equalTo(50)
