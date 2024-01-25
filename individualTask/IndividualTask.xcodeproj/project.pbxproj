@@ -55,16 +55,16 @@
 /* Begin PBXFileReference section */
 		F825A2892B34445400041B32 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		F825A28B2B34445E00041B32 /* DateExtensino.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensino.swift; sourceTree = "<group>"; };
-		F883C3C92B26E84C004E94E3 /* SpartaMyTodoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpartaMyTodoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F883C3C92B26E84C004E94E3 /* IndividualTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IndividualTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F883C3CC2B26E84C004E94E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F883C3CE2B26E84C004E94E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F883C3D02B26E84C004E94E3 /* TodoListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListVC.swift; sourceTree = "<group>"; };
 		F883C3D52B26E84D004E94E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F883C3D82B26E84D004E94E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F883C3DA2B26E84D004E94E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F883C3DF2B26E84D004E94E3 /* SpartaMyTodoListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpartaMyTodoListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F883C3DF2B26E84D004E94E3 /* IndividualTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IndividualTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F883C3E32B26E84D004E94E3 /* SpartaMyTodoListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpartaMyTodoListTests.swift; sourceTree = "<group>"; };
-		F883C3E92B26E84D004E94E3 /* SpartaMyTodoListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpartaMyTodoListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F883C3E92B26E84D004E94E3 /* IndividualTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IndividualTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F883C3ED2B26E84D004E94E3 /* SpartaMyTodoListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpartaMyTodoListUITests.swift; sourceTree = "<group>"; };
 		F883C3EF2B26E84D004E94E3 /* SpartaMyTodoListUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpartaMyTodoListUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F8871E952B4BE14D00262155 /* TodoListHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListHeader.swift; sourceTree = "<group>"; };
@@ -142,7 +142,7 @@
 		F883C3C02B26E84C004E94E3 = {
 			isa = PBXGroup;
 			children = (
-				F883C3CB2B26E84C004E94E3 /* SpartaMyTodoList */,
+				F883C3CB2B26E84C004E94E3 /* IndividualTask */,
 				F883C3E22B26E84D004E94E3 /* SpartaMyTodoListTests */,
 				F883C3EC2B26E84D004E94E3 /* SpartaMyTodoListUITests */,
 				F883C3CA2B26E84C004E94E3 /* Products */,
@@ -152,14 +152,14 @@
 		F883C3CA2B26E84C004E94E3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F883C3C92B26E84C004E94E3 /* SpartaMyTodoList.app */,
-				F883C3DF2B26E84D004E94E3 /* SpartaMyTodoListTests.xctest */,
-				F883C3E92B26E84D004E94E3 /* SpartaMyTodoListUITests.xctest */,
+				F883C3C92B26E84C004E94E3 /* IndividualTask.app */,
+				F883C3DF2B26E84D004E94E3 /* IndividualTaskTests.xctest */,
+				F883C3E92B26E84D004E94E3 /* IndividualTaskUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F883C3CB2B26E84C004E94E3 /* SpartaMyTodoList */ = {
+		F883C3CB2B26E84C004E94E3 /* IndividualTask */ = {
 			isa = PBXGroup;
 			children = (
 				F883C3CC2B26E84C004E94E3 /* AppDelegate.swift */,
@@ -173,7 +173,7 @@
 				F8612DA52B316CD800F638F1 /* Pet */,
 				F8B128B42B621DBE00680E78 /* ProfileDesignVC */,
 			);
-			path = SpartaMyTodoList;
+			path = IndividualTask;
 			sourceTree = "<group>";
 		};
 		F883C3E22B26E84D004E94E3 /* SpartaMyTodoListTests */ = {
@@ -268,9 +268,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F883C3C82B26E84C004E94E3 /* SpartaMyTodoList */ = {
+		F883C3C82B26E84C004E94E3 /* IndividualTask */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F883C3F32B26E84D004E94E3 /* Build configuration list for PBXNativeTarget "SpartaMyTodoList" */;
+			buildConfigurationList = F883C3F32B26E84D004E94E3 /* Build configuration list for PBXNativeTarget "IndividualTask" */;
 			buildPhases = (
 				F883C3C52B26E84C004E94E3 /* Sources */,
 				F883C3C62B26E84C004E94E3 /* Frameworks */,
@@ -280,17 +280,17 @@
 			);
 			dependencies = (
 			);
-			name = SpartaMyTodoList;
+			name = IndividualTask;
 			packageProductDependencies = (
 				F8D7666B2B26FE2300F7B402 /* SnapKit */,
 			);
 			productName = SpartaMyTodoList;
-			productReference = F883C3C92B26E84C004E94E3 /* SpartaMyTodoList.app */;
+			productReference = F883C3C92B26E84C004E94E3 /* IndividualTask.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F883C3DE2B26E84D004E94E3 /* SpartaMyTodoListTests */ = {
+		F883C3DE2B26E84D004E94E3 /* IndividualTaskTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F883C3F62B26E84D004E94E3 /* Build configuration list for PBXNativeTarget "SpartaMyTodoListTests" */;
+			buildConfigurationList = F883C3F62B26E84D004E94E3 /* Build configuration list for PBXNativeTarget "IndividualTaskTests" */;
 			buildPhases = (
 				F883C3DB2B26E84D004E94E3 /* Sources */,
 				F883C3DC2B26E84D004E94E3 /* Frameworks */,
@@ -301,14 +301,14 @@
 			dependencies = (
 				F883C3E12B26E84D004E94E3 /* PBXTargetDependency */,
 			);
-			name = SpartaMyTodoListTests;
+			name = IndividualTaskTests;
 			productName = SpartaMyTodoListTests;
-			productReference = F883C3DF2B26E84D004E94E3 /* SpartaMyTodoListTests.xctest */;
+			productReference = F883C3DF2B26E84D004E94E3 /* IndividualTaskTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		F883C3E82B26E84D004E94E3 /* SpartaMyTodoListUITests */ = {
+		F883C3E82B26E84D004E94E3 /* IndividualTaskUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F883C3F92B26E84D004E94E3 /* Build configuration list for PBXNativeTarget "SpartaMyTodoListUITests" */;
+			buildConfigurationList = F883C3F92B26E84D004E94E3 /* Build configuration list for PBXNativeTarget "IndividualTaskUITests" */;
 			buildPhases = (
 				F883C3E52B26E84D004E94E3 /* Sources */,
 				F883C3E62B26E84D004E94E3 /* Frameworks */,
@@ -319,9 +319,9 @@
 			dependencies = (
 				F883C3EB2B26E84D004E94E3 /* PBXTargetDependency */,
 			);
-			name = SpartaMyTodoListUITests;
+			name = IndividualTaskUITests;
 			productName = SpartaMyTodoListUITests;
-			productReference = F883C3E92B26E84D004E94E3 /* SpartaMyTodoListUITests.xctest */;
+			productReference = F883C3E92B26E84D004E94E3 /* IndividualTaskUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -347,7 +347,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F883C3C42B26E84C004E94E3 /* Build configuration list for PBXProject "SpartaMyTodoList" */;
+			buildConfigurationList = F883C3C42B26E84C004E94E3 /* Build configuration list for PBXProject "IndividualTask" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -363,9 +363,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F883C3C82B26E84C004E94E3 /* SpartaMyTodoList */,
-				F883C3DE2B26E84D004E94E3 /* SpartaMyTodoListTests */,
-				F883C3E82B26E84D004E94E3 /* SpartaMyTodoListUITests */,
+				F883C3C82B26E84C004E94E3 /* IndividualTask */,
+				F883C3DE2B26E84D004E94E3 /* IndividualTaskTests */,
+				F883C3E82B26E84D004E94E3 /* IndividualTaskUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -446,12 +446,12 @@
 /* Begin PBXTargetDependency section */
 		F883C3E12B26E84D004E94E3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F883C3C82B26E84C004E94E3 /* SpartaMyTodoList */;
+			target = F883C3C82B26E84C004E94E3 /* IndividualTask */;
 			targetProxy = F883C3E02B26E84D004E94E3 /* PBXContainerItemProxy */;
 		};
 		F883C3EB2B26E84D004E94E3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F883C3C82B26E84C004E94E3 /* SpartaMyTodoList */;
+			target = F883C3C82B26E84C004E94E3 /* IndividualTask */;
 			targetProxy = F883C3EA2B26E84D004E94E3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -591,7 +591,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4G47XHXXQX;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SpartaMyTodoList/Info.plist;
+				INFOPLIST_FILE = IndividualTask/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -601,7 +601,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.WonDongJin.SpartaMyTodoList;
+				PRODUCT_BUNDLE_IDENTIFIER = com.WonDongJin.IndividualTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -618,7 +618,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4G47XHXXQX;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SpartaMyTodoList/Info.plist;
+				INFOPLIST_FILE = IndividualTask/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -628,7 +628,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.WonDongJin.SpartaMyTodoList;
+				PRODUCT_BUNDLE_IDENTIFIER = com.WonDongJin.IndividualTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -652,7 +652,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpartaMyTodoList.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SpartaMyTodoList";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IndividualTask.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/IndividualTask";
 			};
 			name = Debug;
 		};
@@ -672,7 +672,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpartaMyTodoList.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SpartaMyTodoList";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IndividualTask.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/IndividualTask";
 			};
 			name = Release;
 		};
@@ -715,7 +715,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F883C3C42B26E84C004E94E3 /* Build configuration list for PBXProject "SpartaMyTodoList" */ = {
+		F883C3C42B26E84C004E94E3 /* Build configuration list for PBXProject "IndividualTask" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F883C3F12B26E84D004E94E3 /* Debug */,
@@ -724,7 +724,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F883C3F32B26E84D004E94E3 /* Build configuration list for PBXNativeTarget "SpartaMyTodoList" */ = {
+		F883C3F32B26E84D004E94E3 /* Build configuration list for PBXNativeTarget "IndividualTask" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F883C3F42B26E84D004E94E3 /* Debug */,
@@ -733,7 +733,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F883C3F62B26E84D004E94E3 /* Build configuration list for PBXNativeTarget "SpartaMyTodoListTests" */ = {
+		F883C3F62B26E84D004E94E3 /* Build configuration list for PBXNativeTarget "IndividualTaskTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F883C3F72B26E84D004E94E3 /* Debug */,
@@ -742,7 +742,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F883C3F92B26E84D004E94E3 /* Build configuration list for PBXNativeTarget "SpartaMyTodoListUITests" */ = {
+		F883C3F92B26E84D004E94E3 /* Build configuration list for PBXNativeTarget "IndividualTaskUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F883C3FA2B26E84D004E94E3 /* Debug */,
