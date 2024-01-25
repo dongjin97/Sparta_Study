@@ -93,6 +93,7 @@ extension MainVC{
             self.spartaImgView.load(url: url)
         }
     }
+    
 //MARK: - Button Action 함수
     @objc private func tapPushPetVC(){
         pushVC(PetVC())
@@ -105,7 +106,7 @@ extension MainVC{
     }
     @objc private func tapPresentProfileDesignVCButton(){
         let vc = ProfileDesignVC()
-        vc.modalPresentationStyle = .automatic
+        vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true)
     }
 }
