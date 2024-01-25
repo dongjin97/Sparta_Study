@@ -19,6 +19,7 @@
 		F883C3F02B26E84D004E94E3 /* SpartaMyTodoListUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F883C3EF2B26E84D004E94E3 /* SpartaMyTodoListUITestsLaunchTests.swift */; };
 		F8871E962B4BE14D00262155 /* TodoListHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8871E952B4BE14D00262155 /* TodoListHeader.swift */; };
 		F8871E982B4BEA9200262155 /* TodoListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8871E972B4BEA9200262155 /* TodoListManager.swift */; };
+		F8B128B62B621DED00680E78 /* ProfileDesignVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B128B52B621DED00680E78 /* ProfileDesignVC.swift */; };
 		F8B601252B4D292F00401E1D /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B601242B4D292F00401E1D /* MainVC.swift */; };
 		F8B601272B4D30A100401E1D /* PetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B601262B4D30A100401E1D /* PetVC.swift */; };
 		F8B601292B4D30F800401E1D /* ExtensionUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B601282B4D30F800401E1D /* ExtensionUIViewController.swift */; };
@@ -68,6 +69,7 @@
 		F883C3EF2B26E84D004E94E3 /* SpartaMyTodoListUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpartaMyTodoListUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F8871E952B4BE14D00262155 /* TodoListHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListHeader.swift; sourceTree = "<group>"; };
 		F8871E972B4BEA9200262155 /* TodoListManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListManager.swift; sourceTree = "<group>"; };
+		F8B128B52B621DED00680E78 /* ProfileDesignVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDesignVC.swift; sourceTree = "<group>"; };
 		F8B601242B4D292F00401E1D /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		F8B601262B4D30A100401E1D /* PetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetVC.swift; sourceTree = "<group>"; };
 		F8B601282B4D30F800401E1D /* ExtensionUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIViewController.swift; sourceTree = "<group>"; };
@@ -108,16 +110,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F825A2872B34431900041B32 /* ViewComponent */ = {
-			isa = PBXGroup;
-			children = (
-				F8D766682B26FCCC00F7B402 /* TodoListTVC.swift */,
-				F8871E952B4BE14D00262155 /* TodoListHeader.swift */,
-				F8B601352B4D4C6500401E1D /* TodoListCompletedTVC.swift */,
-			);
-			path = ViewComponent;
-			sourceTree = "<group>";
-		};
 		F825A2882B3443AB00041B32 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,23 +124,19 @@
 		F8612DA42B316CCD00F638F1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F8D7666D2B26FE3F00F7B402 /* TodoListModel.swift */,
 				F8B6012D2B4D34C500401E1D /* CatDataModel.swift */,
-				F8B601372B4D4E6300401E1D /* TodoListCompletedModl.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		F8612DA52B316CD800F638F1 /* VC */ = {
+		F8612DA52B316CD800F638F1 /* Pet */ = {
 			isa = PBXGroup;
 			children = (
-				F8B601242B4D292F00401E1D /* MainVC.swift */,
-				F883C3D02B26E84C004E94E3 /* TodoListVC.swift */,
-				F8B601332B4D493800401E1D /* TodoListCompletedVC.swift */,
-				F8B601262B4D30A100401E1D /* PetVC.swift */,
-				F825A2872B34431900041B32 /* ViewComponent */,
+				F8B128B32B621DB200680E78 /* VC */,
+				F8612DA42B316CCD00F638F1 /* Model */,
+				F8B6012A2B4D328B00401E1D /* Service */,
 			);
-			path = VC;
+			path = Pet;
 			sourceTree = "<group>";
 		};
 		F883C3C02B26E84C004E94E3 = {
@@ -180,9 +168,10 @@
 				F883C3D72B26E84D004E94E3 /* LaunchScreen.storyboard */,
 				F883C3DA2B26E84D004E94E3 /* Info.plist */,
 				F825A2882B3443AB00041B32 /* Extension */,
-				F8612DA52B316CD800F638F1 /* VC */,
-				F8B6012A2B4D328B00401E1D /* Service */,
-				F8612DA42B316CCD00F638F1 /* Model */,
+				F8B601242B4D292F00401E1D /* MainVC.swift */,
+				F8B128AE2B621D2200680E78 /* TodoList */,
+				F8612DA52B316CD800F638F1 /* Pet */,
+				F8B128B42B621DBE00680E78 /* ProfileDesignVC */,
 			);
 			path = SpartaMyTodoList;
 			sourceTree = "<group>";
@@ -204,10 +193,72 @@
 			path = SpartaMyTodoListUITests;
 			sourceTree = "<group>";
 		};
-		F8B6012A2B4D328B00401E1D /* Service */ = {
+		F8B128AE2B621D2200680E78 /* TodoList */ = {
+			isa = PBXGroup;
+			children = (
+				F8B128B22B621D8000680E78 /* ViewComponent */,
+				F8B128B12B621D3100680E78 /* Service */,
+				F8B128B02B621D2F00680E78 /* VC */,
+				F8B128AF2B621D2D00680E78 /* Model */,
+			);
+			path = TodoList;
+			sourceTree = "<group>";
+		};
+		F8B128AF2B621D2D00680E78 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F8D7666D2B26FE3F00F7B402 /* TodoListModel.swift */,
+				F8B601372B4D4E6300401E1D /* TodoListCompletedModl.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F8B128B02B621D2F00680E78 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				F8B601332B4D493800401E1D /* TodoListCompletedVC.swift */,
+				F883C3D02B26E84C004E94E3 /* TodoListVC.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		F8B128B12B621D3100680E78 /* Service */ = {
 			isa = PBXGroup;
 			children = (
 				F8871E972B4BEA9200262155 /* TodoListManager.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		F8B128B22B621D8000680E78 /* ViewComponent */ = {
+			isa = PBXGroup;
+			children = (
+				F8D766682B26FCCC00F7B402 /* TodoListTVC.swift */,
+				F8871E952B4BE14D00262155 /* TodoListHeader.swift */,
+				F8B601352B4D4C6500401E1D /* TodoListCompletedTVC.swift */,
+			);
+			path = ViewComponent;
+			sourceTree = "<group>";
+		};
+		F8B128B32B621DB200680E78 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				F8B601262B4D30A100401E1D /* PetVC.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		F8B128B42B621DBE00680E78 /* ProfileDesignVC */ = {
+			isa = PBXGroup;
+			children = (
+				F8B128B52B621DED00680E78 /* ProfileDesignVC.swift */,
+			);
+			path = ProfileDesignVC;
+			sourceTree = "<group>";
+		};
+		F8B6012A2B4D328B00401E1D /* Service */ = {
+			isa = PBXGroup;
+			children = (
 				F8B6012B2B4D32B400401E1D /* CatDataManager.swift */,
 				F8D288F02B50F99A00A25A8A /* NetWorkError.swift */,
 			);
@@ -366,6 +417,7 @@
 				F8D288F12B50F99A00A25A8A /* NetWorkError.swift in Sources */,
 				F8B6012C2B4D32B400401E1D /* CatDataManager.swift in Sources */,
 				F883C3CD2B26E84C004E94E3 /* AppDelegate.swift in Sources */,
+				F8B128B62B621DED00680E78 /* ProfileDesignVC.swift in Sources */,
 				F8B601382B4D4E6300401E1D /* TodoListCompletedModl.swift in Sources */,
 				F883C3CF2B26E84C004E94E3 /* SceneDelegate.swift in Sources */,
 				F8B601362B4D4C6500401E1D /* TodoListCompletedTVC.swift in Sources */,
