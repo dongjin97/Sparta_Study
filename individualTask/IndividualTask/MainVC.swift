@@ -39,6 +39,16 @@ class MainVC: UIViewController {
         btn.addTarget(self, action: #selector(tapPushPetVC), for: .touchUpInside)
         return btn
     }()
+    private lazy var profileDesignVCButton : UIButton = { // PetVC 로 Push 버튼
+       let btn = UIButton()
+        btn.setTitle("ProfileDesignViewController", for: .normal)
+        btn.setTitleColor(.white, for: .normal)
+        btn.backgroundColor = UIColor(named: "PrimaryColor")
+        btn.layer.cornerRadius = 10
+        btn.layer.masksToBounds = true
+        btn.addTarget(self, action: #selector(tapPresentProfileDesignVCButton), for: .touchUpInside)
+        return btn
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
@@ -55,6 +65,7 @@ extension MainVC{
         self.view.addSubview(pushTodoListVCBtn)
         self.view.addSubview(completedTodoListVCBtn)
         self.view.addSubview(pushPetVCBtn)
+        self.view.addSubview(profileDesignVCButton)
     }
     private func setAutoLayout(){
         spartaImgView.snp.makeConstraints { make in
@@ -72,6 +83,10 @@ extension MainVC{
         }
         pushPetVCBtn.snp.makeConstraints { make in
             make.top.equalTo(completedTodoListVCBtn.snp.bottom).offset(50)
+            make.centerX.equalToSuperview()
+        }
+        profileDesignVCButton.snp.makeConstraints { make in
+            make.top.equalTo(pushPetVCBtn.snp.bottom).offset(50)
             make.centerX.equalToSuperview()
             make.bottom.equalTo(self.view.safeAreaLayoutGuide).offset(-150)
         }
@@ -91,5 +106,10 @@ extension MainVC{
     }
     @objc private func tapTodoListCompletedVC(){
         pushVC(TodoListCompletedVC())
+    }
+    @objc private func tapPresentProfileDesignVCButton(){
+        let vc = ProfileDesignVC()
+        vc.modalPresentationStyle = .automatic
+        self.present(vc, animated: true)
     }
 }
