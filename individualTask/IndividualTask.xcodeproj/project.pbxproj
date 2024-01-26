@@ -11,6 +11,7 @@
 		F825A28C2B34445E00041B32 /* Date+Extensino.swift in Sources */ = {isa = PBXBuildFile; fileRef = F825A28B2B34445E00041B32 /* Date+Extensino.swift */; };
 		F8303FEC2B6255E100FD7D14 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8303FEB2B6255E100FD7D14 /* UserInfo.swift */; };
 		F8303FEF2B62591D00FD7D14 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8303FEE2B62591D00FD7D14 /* UILabel+Extension.swift */; };
+		F8303FF12B62600E00FD7D14 /* MiddelBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8303FF02B62600E00FD7D14 /* MiddelBarView.swift */; };
 		F862C8122B62292A008120FA /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F862C8112B62292A008120FA /* UIImageView+Extension.swift */; };
 		F862C8142B622955008120FA /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F862C8132B622955008120FA /* UIView+Extension.swift */; };
 		F862C8162B622964008120FA /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F862C8152B622964008120FA /* UIStackView+Extension.swift */; };
@@ -62,6 +63,7 @@
 		F825A28B2B34445E00041B32 /* Date+Extensino.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensino.swift"; sourceTree = "<group>"; };
 		F8303FEB2B6255E100FD7D14 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		F8303FEE2B62591D00FD7D14 /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
+		F8303FF02B62600E00FD7D14 /* MiddelBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddelBarView.swift; sourceTree = "<group>"; };
 		F862C8112B62292A008120FA /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		F862C8132B622955008120FA /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		F862C8152B622964008120FA /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				F8928B712B6246C2004DD6A6 /* UserInfoView.swift */,
+				F8303FF02B62600E00FD7D14 /* MiddelBarView.swift */,
 			);
 			path = ViewComponent;
 			sourceTree = "<group>";
@@ -280,9 +283,9 @@
 		F8B128B42B621DBE00680E78 /* ProfileDesignVC */ = {
 			isa = PBXGroup;
 			children = (
+				F8B128B52B621DED00680E78 /* ProfileDesignVC.swift */,
 				F8303FED2B6257A300FD7D14 /* ViewComponent */,
 				F8303FE92B6255D000FD7D14 /* Model */,
-				F8B128B52B621DED00680E78 /* ProfileDesignVC.swift */,
 			);
 			path = ProfileDesignVC;
 			sourceTree = "<group>";
@@ -451,6 +454,7 @@
 				F8B6012C2B4D32B400401E1D /* CatDataManager.swift in Sources */,
 				F8303FEF2B62591D00FD7D14 /* UILabel+Extension.swift in Sources */,
 				F862C8142B622955008120FA /* UIView+Extension.swift in Sources */,
+				F8303FF12B62600E00FD7D14 /* MiddelBarView.swift in Sources */,
 				F883C3CD2B26E84C004E94E3 /* AppDelegate.swift in Sources */,
 				F8B128B62B621DED00680E78 /* ProfileDesignVC.swift in Sources */,
 				F8B601382B4D4E6300401E1D /* TodoListCompletedModl.swift in Sources */,

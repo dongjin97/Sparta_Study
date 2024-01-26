@@ -33,6 +33,10 @@ class ProfileDesignVC: UIViewController {
         view.setCntLabel(model: UserInfo(post: 7, follower: 0, following: 0))
         return view
     }()
+    private lazy var middleBarView : MiddelBarView = {
+       let view = MiddelBarView()
+        return view
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
@@ -49,7 +53,7 @@ extension ProfileDesignVC {
 //MARK: - View/UI관련
 extension ProfileDesignVC{
     private func addSubViewS(){
-        self.view.addSubViews([dismissButton,userNameLabel,settingButton,userInfoView])
+        self.view.addSubViews([dismissButton,userNameLabel,settingButton,userInfoView,middleBarView])
     }
     private func setAutoLayout(){
         dismissButton.snp.makeConstraints { make in
@@ -69,6 +73,11 @@ extension ProfileDesignVC{
             make.left.equalToSuperview().offset(14)
             make.right.equalToSuperview().offset(-28)
 //            make.bottom.equalToSuperview()
+        }
+        middleBarView.snp.makeConstraints { make in
+            make.top.equalTo(userInfoView.snp.bottom).offset(10)
+            make.left.equalToSuperview().offset(15)
+            make.right.equalToSuperview().offset(-15)
         }
     }
 }
