@@ -64,7 +64,6 @@ class MainVC: UIViewController {
         addSubViews()
         setAutoLayout()
         getHomeImg()
-      
     }
 }
 extension MainVC{

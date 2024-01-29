@@ -21,7 +21,7 @@ class MiddelBarView : UIView {
     }()
     private lazy var followButton : UIButton = {
         var config = UIButton.Configuration.plain()
-        config.attributedTitle = AttributedString("Follow", attributes: AttributeContainer([NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 20)]))
+        config.attributedTitle = AttributedString("Follow", attributes: AttributeContainer([NSAttributedString.Key.font : UIFont(name: OpenSans.bold, size: 20)!]))
         config.baseForegroundColor = .white
         config.titleAlignment = .center
         let button = UIButton(configuration: config)
@@ -32,7 +32,7 @@ class MiddelBarView : UIView {
     }()
     private lazy var messageButton : UIButton = {
         var config = UIButton.Configuration.plain()
-        config.attributedTitle = AttributedString("Message", attributes: AttributeContainer([NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 20)]))
+        config.attributedTitle = AttributedString("Message", attributes: AttributeContainer([NSAttributedString.Key.font : UIFont(name: OpenSans.bold, size: 20)!]))
         config.baseForegroundColor = .black
         config.titleAlignment = .center
         let button = UIButton(configuration: config)
@@ -51,6 +51,7 @@ class MiddelBarView : UIView {
         button.layer.masksToBounds = true
         return button
     }()
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubViews([buttonStackView,moreButton])

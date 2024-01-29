@@ -6,3 +6,7 @@
 //
 
 import Foundation
+enum OpenSans{
+    static let regular = "OpenSans-Regular"
+    static let bold = "OpenSansRoman-Bold"
+}

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F821D11C2B67A88700BDFFF0 /* PictureCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F821D11B2B67A88700BDFFF0 /* PictureCollectionViewCell.swift */; };
 		F825A28A2B34445400041B32 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F825A2892B34445400041B32 /* String+Extension.swift */; };
 		F825A28C2B34445E00041B32 /* Date+Extensino.swift in Sources */ = {isa = PBXBuildFile; fileRef = F825A28B2B34445E00041B32 /* Date+Extensino.swift */; };
 		F8303FEC2B6255E100FD7D14 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8303FEB2B6255E100FD7D14 /* UserInfo.swift */; };
@@ -25,6 +26,9 @@
 		F883C3F02B26E84D004E94E3 /* SpartaMyTodoListUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F883C3EF2B26E84D004E94E3 /* SpartaMyTodoListUITestsLaunchTests.swift */; };
 		F8871E962B4BE14D00262155 /* TodoListHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8871E952B4BE14D00262155 /* TodoListHeader.swift */; };
 		F8871E982B4BEA9200262155 /* TodoListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8871E972B4BEA9200262155 /* TodoListManager.swift */; };
+		F88A1DB72B63A86600CB2846 /* OpenSans-Italic-VariableFont_wdth,wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F88A1DB52B63A86600CB2846 /* OpenSans-Italic-VariableFont_wdth,wght.ttf */; };
+		F88A1DB82B63A86600CB2846 /* OpenSans-VariableFont_wdth,wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F88A1DB62B63A86600CB2846 /* OpenSans-VariableFont_wdth,wght.ttf */; };
+		F88A1DBA2B63A8F600CB2846 /* OpenSans.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88A1DB92B63A8F600CB2846 /* OpenSans.swift */; };
 		F8928B722B6246C2004DD6A6 /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8928B712B6246C2004DD6A6 /* UserInfoView.swift */; };
 		F8B128B62B621DED00680E78 /* ProfileDesignVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B128B52B621DED00680E78 /* ProfileDesignVC.swift */; };
 		F8B601252B4D292F00401E1D /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B601242B4D292F00401E1D /* MainVC.swift */; };
@@ -59,6 +63,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F821D11B2B67A88700BDFFF0 /* PictureCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureCollectionViewCell.swift; sourceTree = "<group>"; };
 		F825A2892B34445400041B32 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		F825A28B2B34445E00041B32 /* Date+Extensino.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensino.swift"; sourceTree = "<group>"; };
 		F8303FEB2B6255E100FD7D14 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
@@ -81,6 +86,9 @@
 		F883C3EF2B26E84D004E94E3 /* SpartaMyTodoListUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpartaMyTodoListUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F8871E952B4BE14D00262155 /* TodoListHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListHeader.swift; sourceTree = "<group>"; };
 		F8871E972B4BEA9200262155 /* TodoListManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListManager.swift; sourceTree = "<group>"; };
+		F88A1DB52B63A86600CB2846 /* OpenSans-Italic-VariableFont_wdth,wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic-VariableFont_wdth,wght.ttf"; sourceTree = "<group>"; };
+		F88A1DB62B63A86600CB2846 /* OpenSans-VariableFont_wdth,wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-VariableFont_wdth,wght.ttf"; sourceTree = "<group>"; };
+		F88A1DB92B63A8F600CB2846 /* OpenSans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSans.swift; sourceTree = "<group>"; };
 		F8928B712B6246C2004DD6A6 /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
 		F8B128B52B621DED00680E78 /* ProfileDesignVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDesignVC.swift; sourceTree = "<group>"; };
 		F8B601242B4D292F00401E1D /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -149,6 +157,7 @@
 			children = (
 				F8928B712B6246C2004DD6A6 /* UserInfoView.swift */,
 				F8303FF02B62600E00FD7D14 /* MiddelBarView.swift */,
+				F821D11B2B67A88700BDFFF0 /* PictureCollectionViewCell.swift */,
 			);
 			path = ViewComponent;
 			sourceTree = "<group>";
@@ -194,6 +203,7 @@
 		F883C3CB2B26E84C004E94E3 /* IndividualTask */ = {
 			isa = PBXGroup;
 			children = (
+				F88A1DB22B63A83D00CB2846 /* Font */,
 				F883C3CC2B26E84C004E94E3 /* AppDelegate.swift */,
 				F883C3CE2B26E84C004E94E3 /* SceneDelegate.swift */,
 				F883C3D52B26E84D004E94E3 /* Assets.xcassets */,
@@ -223,6 +233,16 @@
 				F883C3EF2B26E84D004E94E3 /* SpartaMyTodoListUITestsLaunchTests.swift */,
 			);
 			path = SpartaMyTodoListUITests;
+			sourceTree = "<group>";
+		};
+		F88A1DB22B63A83D00CB2846 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				F88A1DB52B63A86600CB2846 /* OpenSans-Italic-VariableFont_wdth,wght.ttf */,
+				F88A1DB62B63A86600CB2846 /* OpenSans-VariableFont_wdth,wght.ttf */,
+				F88A1DB92B63A8F600CB2846 /* OpenSans.swift */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 		F8B128AE2B621D2200680E78 /* TodoList */ = {
@@ -409,8 +429,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F88A1DB82B63A86600CB2846 /* OpenSans-VariableFont_wdth,wght.ttf in Resources */,
 				F883C3D92B26E84D004E94E3 /* LaunchScreen.storyboard in Resources */,
 				F883C3D62B26E84D004E94E3 /* Assets.xcassets in Resources */,
+				F88A1DB72B63A86600CB2846 /* OpenSans-Italic-VariableFont_wdth,wght.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,11 +478,13 @@
 				F862C8142B622955008120FA /* UIView+Extension.swift in Sources */,
 				F8303FF12B62600E00FD7D14 /* MiddelBarView.swift in Sources */,
 				F883C3CD2B26E84C004E94E3 /* AppDelegate.swift in Sources */,
+				F821D11C2B67A88700BDFFF0 /* PictureCollectionViewCell.swift in Sources */,
 				F8B128B62B621DED00680E78 /* ProfileDesignVC.swift in Sources */,
 				F8B601382B4D4E6300401E1D /* TodoListCompletedModl.swift in Sources */,
 				F883C3CF2B26E84C004E94E3 /* SceneDelegate.swift in Sources */,
 				F8B601362B4D4C6500401E1D /* TodoListCompletedTVC.swift in Sources */,
 				F862C8162B622964008120FA /* UIStackView+Extension.swift in Sources */,
+				F88A1DBA2B63A8F600CB2846 /* OpenSans.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
