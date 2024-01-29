@@ -104,7 +104,7 @@ extension MainVC{
         pushVC(TodoListCompletedVC())
     }
     @objc private func tapPresentProfileDesignVCButton(){
-        let vc = ProfileDesignVC()
+        let vc = ProfileDesignTabBarController()
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true)
     }

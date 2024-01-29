@@ -40,7 +40,7 @@ class ProfileDesignVC: UIViewController {
     }()
     private lazy var middleBarViewBorder : UIView = {
         let view = UIView()
-        view.backgroundColor = .lightGray
+        view.backgroundColor = UIColor(hexCode: "DBDBDB")
         return view
     }()
     private lazy var navigalleryButton : UIButton = {
@@ -69,11 +69,11 @@ class ProfileDesignVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.view.backgroundColor = .white
         addSubViewS()
         setAutoLayout()
         collectionViewConfigure()
+        
     }
 }
 //MARK: - CollectionView

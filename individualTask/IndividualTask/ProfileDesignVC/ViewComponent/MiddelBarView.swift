@@ -37,7 +37,7 @@ class MiddelBarView : UIView {
         config.titleAlignment = .center
         let button = UIButton(configuration: config)
         button.layer.borderWidth = 1.5
-        button.layer.borderColor =  UIColor.gray.cgColor
+        button.layer.borderColor =  UIColor(hexCode: "DADADA").cgColor
         button.layer.cornerRadius = 4
         button.layer.masksToBounds = true
         return button
@@ -46,7 +46,7 @@ class MiddelBarView : UIView {
         let button = UIButton()
         button.setImage(UIImage(named: "moreImg"), for: .normal)
         button.layer.borderWidth = 1.5
-        button.layer.borderColor =  UIColor.gray.cgColor
+        button.layer.borderColor =  UIColor(hexCode: "DADADA").cgColor
         button.layer.cornerRadius = 4
         button.layer.masksToBounds = true
         return button

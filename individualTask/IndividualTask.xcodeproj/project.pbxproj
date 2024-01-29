@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		F821D11C2B67A88700BDFFF0 /* PictureCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F821D11B2B67A88700BDFFF0 /* PictureCollectionViewCell.swift */; };
+		F821D11E2B67B01400BDFFF0 /* ProfileDesignTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F821D11D2B67B01400BDFFF0 /* ProfileDesignTabBarController.swift */; };
+		F821D1202B67B2CF00BDFFF0 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F821D11F2B67B2CF00BDFFF0 /* UIColor+Extension.swift */; };
 		F825A28A2B34445400041B32 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F825A2892B34445400041B32 /* String+Extension.swift */; };
 		F825A28C2B34445E00041B32 /* Date+Extensino.swift in Sources */ = {isa = PBXBuildFile; fileRef = F825A28B2B34445E00041B32 /* Date+Extensino.swift */; };
 		F8303FEC2B6255E100FD7D14 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8303FEB2B6255E100FD7D14 /* UserInfo.swift */; };
@@ -64,6 +66,8 @@
 
 /* Begin PBXFileReference section */
 		F821D11B2B67A88700BDFFF0 /* PictureCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureCollectionViewCell.swift; sourceTree = "<group>"; };
+		F821D11D2B67B01400BDFFF0 /* ProfileDesignTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDesignTabBarController.swift; sourceTree = "<group>"; };
+		F821D11F2B67B2CF00BDFFF0 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		F825A2892B34445400041B32 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		F825A28B2B34445E00041B32 /* Date+Extensino.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensino.swift"; sourceTree = "<group>"; };
 		F8303FEB2B6255E100FD7D14 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
@@ -140,6 +144,7 @@
 				F862C8132B622955008120FA /* UIView+Extension.swift */,
 				F862C8152B622964008120FA /* UIStackView+Extension.swift */,
 				F8303FEE2B62591D00FD7D14 /* UILabel+Extension.swift */,
+				F821D11F2B67B2CF00BDFFF0 /* UIColor+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -303,6 +308,7 @@
 		F8B128B42B621DBE00680E78 /* ProfileDesignVC */ = {
 			isa = PBXGroup;
 			children = (
+				F821D11D2B67B01400BDFFF0 /* ProfileDesignTabBarController.swift */,
 				F8B128B52B621DED00680E78 /* ProfileDesignVC.swift */,
 				F8303FED2B6257A300FD7D14 /* ViewComponent */,
 				F8303FE92B6255D000FD7D14 /* Model */,
@@ -466,6 +472,7 @@
 				F8D7666E2B26FE3F00F7B402 /* TodoListModel.swift in Sources */,
 				F825A28C2B34445E00041B32 /* Date+Extensino.swift in Sources */,
 				F8B601272B4D30A100401E1D /* PetVC.swift in Sources */,
+				F821D1202B67B2CF00BDFFF0 /* UIColor+Extension.swift in Sources */,
 				F8871E962B4BE14D00262155 /* TodoListHeader.swift in Sources */,
 				F862C8122B62292A008120FA /* UIImageView+Extension.swift in Sources */,
 				F825A28A2B34445400041B32 /* String+Extension.swift in Sources */,
@@ -485,6 +492,7 @@
 				F8B601362B4D4C6500401E1D /* TodoListCompletedTVC.swift in Sources */,
 				F862C8162B622964008120FA /* UIStackView+Extension.swift in Sources */,
 				F88A1DBA2B63A8F600CB2846 /* OpenSans.swift in Sources */,
+				F821D11E2B67B01400BDFFF0 /* ProfileDesignTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

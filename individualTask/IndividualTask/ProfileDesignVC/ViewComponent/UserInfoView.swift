@@ -35,14 +35,14 @@ class UserInfoView : UIView {
         let label = UILabel()
         label.font = UIFont(name: OpenSans.bold, size: 14)
         label.numberOfLines = 2
-        label.textColor = .black
+        label.textColor = UIColor(hexCode: "252525")
         label.setRangeTextFont(fullText: "르탄이\niOS Developer 🍎", range: "iOS Developer 🍎", uiFont: UIFont(name: OpenSans.regular, size: 14)!)
         return label
     }()
     private lazy var urlButton : UIButton =  {
         var config = UIButton.Configuration.plain()
         config.attributedTitle = AttributedString("spartacodingclub.kr", attributes: AttributeContainer([NSAttributedString.Key.font : UIFont(name: OpenSans.regular, size: 14)!]))
-        config.baseForegroundColor = .systemBlue
+        config.baseForegroundColor = UIColor(hexCode: "3898F3")
         config.contentInsets = NSDirectionalEdgeInsets.init(top: 0, leading: 0, bottom: 0, trailing: 0)
         let button = UIButton(configuration: config)
         button.contentHorizontalAlignment = .leading
