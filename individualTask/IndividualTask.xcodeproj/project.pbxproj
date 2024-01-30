@@ -47,6 +47,8 @@
 		F8D766692B26FCCC00F7B402 /* TodoListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D766682B26FCCC00F7B402 /* TodoListTVC.swift */; };
 		F8D7666C2B26FE2300F7B402 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F8D7666B2B26FE2300F7B402 /* SnapKit */; };
 		F8D7666E2B26FE3F00F7B402 /* TodoListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D7666D2B26FE3F00F7B402 /* TodoListModel.swift */; };
+		F8EED3032B68FD8300AA41E7 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EED3022B68FD8300AA41E7 /* ProfileModel.swift */; };
+		F8EED3052B68FDD500AA41E7 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EED3042B68FDD500AA41E7 /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +112,8 @@
 		F8D288F02B50F99A00A25A8A /* NetWorkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkError.swift; sourceTree = "<group>"; };
 		F8D766682B26FCCC00F7B402 /* TodoListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListTVC.swift; sourceTree = "<group>"; };
 		F8D7666D2B26FE3F00F7B402 /* TodoListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListModel.swift; sourceTree = "<group>"; };
+		F8EED3022B68FD8300AA41E7 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
+		F8EED3042B68FDD500AA41E7 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,7 +145,9 @@
 		F821D1212B67BA2A00BDFFF0 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				F821D1222B67BA5900BDFFF0 /* ProfileViewController.swift */,
+				F8EED3002B68FD6800AA41E7 /* Controller */,
+				F8EED2FF2B68FD5F00AA41E7 /* View */,
+				F8EED2FE2B68FCD400AA41E7 /* Model */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -355,6 +361,30 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		F8EED2FE2B68FCD400AA41E7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F8EED3022B68FD8300AA41E7 /* ProfileModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F8EED2FF2B68FD5F00AA41E7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F8EED3042B68FDD500AA41E7 /* ProfileView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F8EED3002B68FD6800AA41E7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F821D1222B67BA5900BDFFF0 /* ProfileViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -496,6 +526,7 @@
 				F8928B722B6246C2004DD6A6 /* UserInfoView.swift in Sources */,
 				F8B6012E2B4D34C500401E1D /* CatDataModel.swift in Sources */,
 				F8B601292B4D30F800401E1D /* UIViewController+Extension.swift in Sources */,
+				F8EED3032B68FD8300AA41E7 /* ProfileModel.swift in Sources */,
 				F8871E982B4BEA9200262155 /* TodoListManager.swift in Sources */,
 				F8303FEC2B6255E100FD7D14 /* UserInfo.swift in Sources */,
 				F8B601252B4D292F00401E1D /* MainVC.swift in Sources */,
@@ -518,6 +549,7 @@
 				F8303FF12B62600E00FD7D14 /* MiddelBarView.swift in Sources */,
 				F883C3CD2B26E84C004E94E3 /* AppDelegate.swift in Sources */,
 				F821D11C2B67A88700BDFFF0 /* PictureCollectionViewCell.swift in Sources */,
+				F8EED3052B68FDD500AA41E7 /* ProfileView.swift in Sources */,
 				F8B128B62B621DED00680E78 /* ProfileDesignVC.swift in Sources */,
 				F8B601382B4D4E6300401E1D /* TodoListCompletedModl.swift in Sources */,
 				F883C3CF2B26E84C004E94E3 /* SceneDelegate.swift in Sources */,
