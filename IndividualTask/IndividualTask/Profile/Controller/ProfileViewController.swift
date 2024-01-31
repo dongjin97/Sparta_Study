@@ -8,7 +8,9 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
+    //MARK: - View
     private lazy var profileView : ProfileView = ProfileView()
+    //MARK: - Data 객체
     var user : ProfileModel?
     override func viewDidLoad() {
         super.viewDidLoad()

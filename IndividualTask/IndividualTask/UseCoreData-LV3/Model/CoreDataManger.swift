@@ -17,7 +17,7 @@ class CoreDataManger{
         return self.persistentContainer!.viewContext
     }
     let request = Task.fetchRequest()
-    func fetchTasksData()->[Task]{
+    func fetchTasksData()->[Task]{ // CoreData Read
         var taskList : [Task] = [Task]()
         do {
             let tasks = try context.fetch(request)
@@ -27,7 +27,7 @@ class CoreDataManger{
         }
         return taskList
     }
-    func addTaskData(_ title : String){
+    func addTaskData(_ title : String){ // CoreData Create
         let newTask = Task(context: context)
         newTask.id = UUID()
         newTask.title = title
@@ -36,7 +36,7 @@ class CoreDataManger{
         newTask.isCompleted = false
         try? context.save()
     }
-    func updateTaskData(taskList : [Task],indexPath : IndexPath,isOn :Bool){
+    func updateTaskData(taskList : [Task],indexPath : IndexPath,isOn :Bool){ // CoreData Update
         do {
             let tasks = try context.fetch(request)
             let filterTask = tasks.filter{$0.id == taskList[indexPath.item].id}[0]
@@ -47,7 +47,7 @@ class CoreDataManger{
             print("Error Update: \(error)")
         }
     }
-    func deleteTaks(taskList: [Task],indexPath: IndexPath){
+    func deleteTaskData(taskList: [Task],indexPath: IndexPath){ // CoreData Delete
         do {
             let tasks = try context.fetch(request)
             let filterTask = tasks.filter{$0.id == taskList[indexPath.item].id}[0]

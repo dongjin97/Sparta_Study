@@ -161,9 +161,9 @@
 		F821D1242B67BA6A00BDFFF0 /* UseCoreData-LV3 */ = {
 			isa = PBXGroup;
 			children = (
-				F8AAFEAB2B6A4ADF0093BB3B /* CoreDataManger.swift */,
+				F8AAFEAD2B6A592B0093BB3B /* Model */,
 				F8EED3062B6A0D0800AA41E7 /* ViewComponent */,
-				F821D1262B67BB2800BDFFF0 /* UseCoreDataViewController.swift */,
+				F8AAFEAE2B6A59330093BB3B /* Controller */,
 			);
 			path = "UseCoreData-LV3";
 			sourceTree = "<group>";
@@ -263,7 +263,6 @@
 				F8B128B42B621DBE00680E78 /* ProfileDesign */,
 				F821D1212B67BA2A00BDFFF0 /* Profile */,
 				F821D1242B67BA6A00BDFFF0 /* UseCoreData-LV3 */,
-				F8EED30C2B6A124100AA41E7 /* TaskModel.xcdatamodeld */,
 			);
 			path = IndividualTask;
 			sourceTree = "<group>";
@@ -293,6 +292,23 @@
 				F88A1DB92B63A8F600CB2846 /* OpenSans.swift */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		F8AAFEAD2B6A592B0093BB3B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F8EED30C2B6A124100AA41E7 /* TaskModel.xcdatamodeld */,
+				F8AAFEAB2B6A4ADF0093BB3B /* CoreDataManger.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F8AAFEAE2B6A59330093BB3B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F821D1262B67BB2800BDFFF0 /* UseCoreDataViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		F8B128AE2B621D2200680E78 /* TodoList */ = {

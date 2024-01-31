@@ -12,3 +12,4 @@ enum NetworkError : Error{
     case unKnown(String)
     case decodeError
 }
+
