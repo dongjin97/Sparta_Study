@@ -10,7 +10,7 @@ import UIKit
 extension Date {
     func changeString() -> String{ // Date format 함수
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
+        dateFormatter.dateFormat = "MM.dd HH:mm:ss"
         return dateFormatter.string(from: self)
     }
 }

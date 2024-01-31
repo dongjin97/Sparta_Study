@@ -63,7 +63,6 @@ class ProfileDesignVC: UIViewController {
         collectionView.isScrollEnabled = true
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.showsVerticalScrollIndicator = true
-        
         return collectionView
     }()
     

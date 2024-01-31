@@ -34,6 +34,7 @@
 		F88A1DB82B63A86600CB2846 /* OpenSans-VariableFont_wdth,wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F88A1DB62B63A86600CB2846 /* OpenSans-VariableFont_wdth,wght.ttf */; };
 		F88A1DBA2B63A8F600CB2846 /* OpenSans.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88A1DB92B63A8F600CB2846 /* OpenSans.swift */; };
 		F8928B722B6246C2004DD6A6 /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8928B712B6246C2004DD6A6 /* UserInfoView.swift */; };
+		F8AAFEAC2B6A4ADF0093BB3B /* CoreDataManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AAFEAB2B6A4ADF0093BB3B /* CoreDataManger.swift */; };
 		F8B128B62B621DED00680E78 /* ProfileDesignVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B128B52B621DED00680E78 /* ProfileDesignVC.swift */; };
 		F8B601252B4D292F00401E1D /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B601242B4D292F00401E1D /* MainVC.swift */; };
 		F8B601272B4D30A100401E1D /* PetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B601262B4D30A100401E1D /* PetVC.swift */; };
@@ -49,6 +50,8 @@
 		F8D7666E2B26FE3F00F7B402 /* TodoListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D7666D2B26FE3F00F7B402 /* TodoListModel.swift */; };
 		F8EED3032B68FD8300AA41E7 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EED3022B68FD8300AA41E7 /* ProfileModel.swift */; };
 		F8EED3052B68FDD500AA41E7 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EED3042B68FDD500AA41E7 /* ProfileView.swift */; };
+		F8EED3082B6A0D3000AA41E7 /* TaskCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EED3072B6A0D3000AA41E7 /* TaskCollectionViewCell.swift */; };
+		F8EED30E2B6A124100AA41E7 /* TaskModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F8EED30C2B6A124100AA41E7 /* TaskModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +103,7 @@
 		F88A1DB62B63A86600CB2846 /* OpenSans-VariableFont_wdth,wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-VariableFont_wdth,wght.ttf"; sourceTree = "<group>"; };
 		F88A1DB92B63A8F600CB2846 /* OpenSans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSans.swift; sourceTree = "<group>"; };
 		F8928B712B6246C2004DD6A6 /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
+		F8AAFEAB2B6A4ADF0093BB3B /* CoreDataManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManger.swift; sourceTree = "<group>"; };
 		F8B128B52B621DED00680E78 /* ProfileDesignVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDesignVC.swift; sourceTree = "<group>"; };
 		F8B601242B4D292F00401E1D /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		F8B601262B4D30A100401E1D /* PetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetVC.swift; sourceTree = "<group>"; };
@@ -114,6 +118,8 @@
 		F8D7666D2B26FE3F00F7B402 /* TodoListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListModel.swift; sourceTree = "<group>"; };
 		F8EED3022B68FD8300AA41E7 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		F8EED3042B68FDD500AA41E7 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		F8EED3072B6A0D3000AA41E7 /* TaskCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCollectionViewCell.swift; sourceTree = "<group>"; };
+		F8EED30D2B6A124100AA41E7 /* TaskModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TaskModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +161,8 @@
 		F821D1242B67BA6A00BDFFF0 /* UseCoreData-LV3 */ = {
 			isa = PBXGroup;
 			children = (
+				F8AAFEAB2B6A4ADF0093BB3B /* CoreDataManger.swift */,
+				F8EED3062B6A0D0800AA41E7 /* ViewComponent */,
 				F821D1262B67BB2800BDFFF0 /* UseCoreDataViewController.swift */,
 			);
 			path = "UseCoreData-LV3";
@@ -255,6 +263,7 @@
 				F8B128B42B621DBE00680E78 /* ProfileDesign */,
 				F821D1212B67BA2A00BDFFF0 /* Profile */,
 				F821D1242B67BA6A00BDFFF0 /* UseCoreData-LV3 */,
+				F8EED30C2B6A124100AA41E7 /* TaskModel.xcdatamodeld */,
 			);
 			path = IndividualTask;
 			sourceTree = "<group>";
@@ -383,6 +392,14 @@
 				F821D1222B67BA5900BDFFF0 /* ProfileViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		F8EED3062B6A0D0800AA41E7 /* ViewComponent */ = {
+			isa = PBXGroup;
+			children = (
+				F8EED3072B6A0D3000AA41E7 /* TaskCollectionViewCell.swift */,
+			);
+			path = ViewComponent;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -525,6 +542,7 @@
 			files = (
 				F8928B722B6246C2004DD6A6 /* UserInfoView.swift in Sources */,
 				F8B6012E2B4D34C500401E1D /* CatDataModel.swift in Sources */,
+				F8EED30E2B6A124100AA41E7 /* TaskModel.xcdatamodeld in Sources */,
 				F8B601292B4D30F800401E1D /* UIViewController+Extension.swift in Sources */,
 				F8EED3032B68FD8300AA41E7 /* ProfileModel.swift in Sources */,
 				F8871E982B4BEA9200262155 /* TodoListManager.swift in Sources */,
@@ -546,6 +564,7 @@
 				F8B6012C2B4D32B400401E1D /* CatDataManager.swift in Sources */,
 				F8303FEF2B62591D00FD7D14 /* UILabel+Extension.swift in Sources */,
 				F862C8142B622955008120FA /* UIView+Extension.swift in Sources */,
+				F8AAFEAC2B6A4ADF0093BB3B /* CoreDataManger.swift in Sources */,
 				F8303FF12B62600E00FD7D14 /* MiddelBarView.swift in Sources */,
 				F883C3CD2B26E84C004E94E3 /* AppDelegate.swift in Sources */,
 				F821D11C2B67A88700BDFFF0 /* PictureCollectionViewCell.swift in Sources */,
@@ -555,6 +574,7 @@
 				F883C3CF2B26E84C004E94E3 /* SceneDelegate.swift in Sources */,
 				F8B601362B4D4C6500401E1D /* TodoListCompletedTVC.swift in Sources */,
 				F862C8162B622964008120FA /* UIStackView+Extension.swift in Sources */,
+				F8EED3082B6A0D3000AA41E7 /* TaskCollectionViewCell.swift in Sources */,
 				F88A1DBA2B63A8F600CB2846 /* OpenSans.swift in Sources */,
 				F821D11E2B67B01400BDFFF0 /* ProfileDesignTabBarController.swift in Sources */,
 			);
@@ -655,7 +675,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -710,7 +730,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -911,6 +931,19 @@
 			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		F8EED30C2B6A124100AA41E7 /* TaskModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F8EED30D2B6A124100AA41E7 /* TaskModel.xcdatamodel */,
+			);
+			currentVersion = F8EED30D2B6A124100AA41E7 /* TaskModel.xcdatamodel */;
+			path = TaskModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F883C3C12B26E84C004E94E3 /* Project object */;
 }
