@@ -9,4 +9,10 @@
 |Read|key에 관련된 모든 데이터 Read|필요한 데이터만 가져올수 있음|
 ## 2. 구조설명
 ### 1. `ProfileViewController` - Profile 디렉토리
+MVC
+- View (ProfileView): ProfileViewController의 View를 담당, UI 관련 함수
+- Controller (ProfileViewController) : ProfileModel구조를 가지는 객체를 선언한후 데이터를 대입하여 View의 Label들의 Text를 설정(관련함수 : setLabelData)
+- Model (ProfileModel) : name과 age를 가지는 구조체 정의
+
+
 ### 2. 데이터 일관성 구현화면 - UseCoreData-LV3 디렉토리
