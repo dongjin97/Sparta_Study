@@ -10,9 +10,12 @@
 ## 2. 구조설명
 ### 1. `ProfileViewController` - Profile 디렉토리
 MVC
-- View (ProfileView): ProfileViewController의 View를 담당, UI 관련 함수
-- Controller (ProfileViewController) : ProfileModel구조를 가지는 객체를 선언한후 데이터를 대입하여 View의 Label들의 Text를 설정(관련함수 : setLabelData)
 - Model (ProfileModel) : name과 age를 가지는 구조체 정의
-
-
+- View (ProfileView,ProfileViewController 일부 코드): ProfileViewController의 View를 담당, UI 관련 함수
+- Controller (ProfileViewController) : ProfileModel구조를 가지는 객체를 선언한후 데이터를 대입하여 View의 Label들의 Text를 설정(관련함수 : setLabelData)
 ### 2. 데이터 일관성 구현화면 - UseCoreData-LV3 디렉토리
+MVC
+- Model : (TaskModel.xcdatamodeld,CoreDataManger) : id, title, createData,modifyData,isCompleted 속성을 가진 엔터티 정의 ,CoreData CRUD 기능
+- View (TaskCollectionViewCell,UseCoreDataViewController 일부 코드 ) : UseCoreDataViewController의 화면을 구성하는 UI담당
+- Controller (UseCoreDataViewController)
+  View가 Load될때 Model에서 정의한 구조를 가지고 CoreDataManger의 싱글톤 패턴의 공용 인스턴스를 taskList에 대입하여 ColletionView의 UI에 필요한 데이터 대입
