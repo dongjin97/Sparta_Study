@@ -15,7 +15,10 @@ MVC
 - Controller (ProfileViewController) : ProfileModel구조를 가지는 객체를 선언한후 데이터를 대입하여 View의 Label들의 Text를 설정(관련함수 : setLabelData)
 ### 2. 데이터 일관성 구현화면 - UseCoreData-LV3 디렉토리
 MVC
-- Model : (TaskModel.xcdatamodeld,CoreDataManger) : id, title, createData,modifyData,isCompleted 속성을 가진 엔터티 정의 ,CoreData CRUD 기능
+- Model : (TaskModel.xcdatamodeld) : id, title, createData,modifyData,isCompleted 속성을 가진 엔터티 정의 ,(CoreDataManger) : TaskModel에서 정의한 구조의 CRUD 기능
 - View (TaskCollectionViewCell,UseCoreDataViewController 일부 코드 ) : UseCoreDataViewController의 화면을 구성하는 UI담당
 - Controller (UseCoreDataViewController)
-  View가 Load될때 Model에서 정의한 구조를 가지고 CoreDataManger의 싱글톤 패턴의 공용 인스턴스를 taskList에 대입하여 ColletionView의 UI에 필요한 데이터 대입
+  READ : View가 나타나기 전에 CoreDataManger의 Read기능인 fetchTasksData함수를 사용하여 taksList에 대입 -> CollectionView의 각각 UI에 해당하는 데이터 설정 (fetchTask() -> cell의 setTaskCell())
+  CREATE : ViewController의 addTaskButttonAction을 통해 입력된 Title를 CoreDataManger의 Create기능인 addTaskData 함수에 전달 (addTaskList()-> CoreDataManger.shared.addTaskData(title))
+  UPDATE : CollectionView에서 변경된 정보를 UIViewController를 통해서 CoreDataManger의 Update기능인 updateTaskData 함수에 전달 (cell.tapSwitchClosure -> updateTask() ->CoreDataManger.share.updateTaskData())
+  DELETE : CollectionView에서 선택된 cell의 indexPath를 활용하여 선택된 셀의 정보를 CoreDataManger의 Delete기능인 함수에 전달 (deleteTask() ->CoreDataManger.shared.deleteTaskData())
