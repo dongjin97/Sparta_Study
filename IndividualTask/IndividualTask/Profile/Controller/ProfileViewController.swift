@@ -26,6 +26,7 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = .white
         self.viewModel.delegate = self
+        
         configureUI()
         setLabelData()
     }
@@ -43,8 +44,7 @@ extension ProfileViewController{
     private func setLabelData(){
         self.profileView.setNameLabel(viewModel.userName)
         self.profileView.setAgeLabel(viewModel.userAge)
-//        updateUserName(name: viewModel.userName)
-//        updateUserAge(age: viewModel.userAge)
+        
         
     }
 }
