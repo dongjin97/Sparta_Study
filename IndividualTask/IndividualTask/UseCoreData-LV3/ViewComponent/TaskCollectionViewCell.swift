@@ -29,7 +29,7 @@ class TaskCollectionViewCell: UICollectionViewCell {
     }()
     private lazy var titleLabel : UILabel = {
         let label = UILabel()
-        label.numberOfLines = 0
+        label.numberOfLines = 1
         label.font = UIFont.systemFont(ofSize: 15)
         return label
     }()

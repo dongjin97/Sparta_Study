@@ -78,6 +78,16 @@ class MainVC: UIViewController {
         button.addTarget(self, action: #selector(tabPushLV3UseCoreData), for: .touchUpInside)
         return button
     }()
+    private lazy var randomVideoViewControllerButton : UIButton = { // PetVC 로 Push 버튼
+       let button = UIButton()
+        button.setTitle("RandomVideoViewController", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = UIColor(named: "PrimaryColor")
+        button.layer.cornerRadius = 10
+        button.layer.masksToBounds = true
+        button.addTarget(self, action: #selector(tapRandomVideoViewController), for: .touchUpInside)
+        return button
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
@@ -91,7 +101,7 @@ extension MainVC{
     private func addSubViews(){
         self.view.addSubview(spartaImgView)
         self.view.addSubview(buttonStackView)
-        buttonStackView.addStackSubViews([pushTodoListVCbutton,completedTodoListVCbutton,pushPetVCbutton,profileDesignVCButton,profileButton,userCoreDataButton])
+        buttonStackView.addStackSubViews([pushTodoListVCbutton,completedTodoListVCbutton,pushPetVCbutton,profileDesignVCButton,profileButton,userCoreDataButton,randomVideoViewControllerButton])
     }
     private func setAutoLayout(){
         spartaImgView.snp.makeConstraints { make in
@@ -103,7 +113,7 @@ extension MainVC{
         buttonStackView.snp.makeConstraints { make in
             make.top.equalTo(spartaImgView.snp.bottom).offset(50)
             make.centerX.equalToSuperview()
-            make.bottom.equalTo(self.view.safeAreaLayoutGuide).offset(-100)
+            make.bottom.equalTo(self.view.safeAreaLayoutGuide).offset(-50)
         }
         
     }
@@ -133,5 +143,8 @@ extension MainVC{
     }
     @objc private func tabPushLV3UseCoreData(){
         pushVC(UseCoreDataViewController())
+    }
+    @objc private func tapRandomVideoViewController(){
+        pushVC(RandomVideoViewController())
     }
 }

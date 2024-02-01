@@ -17,6 +17,7 @@ class UseCoreDataViewController: UIViewController {
         layout.minimumLineSpacing = 10 // 열 수직 방향
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.register(TaskCollectionViewCell.self, forCellWithReuseIdentifier: TaskCollectionViewCell.identi)
+        
         collectionView.isScrollEnabled = true
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.showsVerticalScrollIndicator = true

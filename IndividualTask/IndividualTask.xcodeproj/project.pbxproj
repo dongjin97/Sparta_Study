@@ -14,6 +14,9 @@
 		F821D1272B67BB2800BDFFF0 /* UseCoreDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F821D1262B67BB2800BDFFF0 /* UseCoreDataViewController.swift */; };
 		F825A28A2B34445400041B32 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F825A2892B34445400041B32 /* String+Extension.swift */; };
 		F825A28C2B34445E00041B32 /* Date+Extensino.swift in Sources */ = {isa = PBXBuildFile; fileRef = F825A28B2B34445E00041B32 /* Date+Extensino.swift */; };
+		F8278B272B6B71AB00B3AC10 /* RandomVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8278B262B6B71AB00B3AC10 /* RandomVideoViewController.swift */; };
+		F8278B292B6B742600B3AC10 /* VideoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8278B282B6B742600B3AC10 /* VideoManager.swift */; };
+		F8278B2C2B6B751200B3AC10 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8278B2B2B6B751200B3AC10 /* Movie.swift */; };
 		F8303FEC2B6255E100FD7D14 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8303FEB2B6255E100FD7D14 /* UserInfo.swift */; };
 		F8303FEF2B62591D00FD7D14 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8303FEE2B62591D00FD7D14 /* UILabel+Extension.swift */; };
 		F8303FF12B62600E00FD7D14 /* MiddelBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8303FF02B62600E00FD7D14 /* MiddelBarView.swift */; };
@@ -79,6 +82,9 @@
 		F821D1262B67BB2800BDFFF0 /* UseCoreDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCoreDataViewController.swift; sourceTree = "<group>"; };
 		F825A2892B34445400041B32 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		F825A28B2B34445E00041B32 /* Date+Extensino.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensino.swift"; sourceTree = "<group>"; };
+		F8278B262B6B71AB00B3AC10 /* RandomVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomVideoViewController.swift; sourceTree = "<group>"; };
+		F8278B282B6B742600B3AC10 /* VideoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoManager.swift; sourceTree = "<group>"; };
+		F8278B2B2B6B751200B3AC10 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		F8303FEB2B6255E100FD7D14 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		F8303FEE2B62591D00FD7D14 /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		F8303FF02B62600E00FD7D14 /* MiddelBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddelBarView.swift; sourceTree = "<group>"; };
@@ -191,6 +197,24 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		F8278B252B6B718300B3AC10 /* RandomVideoViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F8278B2A2B6B750600B3AC10 /* Model */,
+				F8278B262B6B71AB00B3AC10 /* RandomVideoViewController.swift */,
+			);
+			path = RandomVideoViewController;
+			sourceTree = "<group>";
+		};
+		F8278B2A2B6B750600B3AC10 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F8278B2B2B6B751200B3AC10 /* Movie.swift */,
+				F8278B282B6B742600B3AC10 /* VideoManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		F8303FE92B6255D000FD7D14 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -263,6 +287,7 @@
 				F8B128B42B621DBE00680E78 /* ProfileDesign */,
 				F821D1212B67BA2A00BDFFF0 /* Profile */,
 				F821D1242B67BA6A00BDFFF0 /* UseCoreData-LV3 */,
+				F8278B252B6B718300B3AC10 /* RandomVideoViewController */,
 			);
 			path = IndividualTask;
 			sourceTree = "<group>";
@@ -570,9 +595,11 @@
 				F821D1272B67BB2800BDFFF0 /* UseCoreDataViewController.swift in Sources */,
 				F821D1202B67B2CF00BDFFF0 /* UIColor+Extension.swift in Sources */,
 				F8871E962B4BE14D00262155 /* TodoListHeader.swift in Sources */,
+				F8278B2C2B6B751200B3AC10 /* Movie.swift in Sources */,
 				F862C8122B62292A008120FA /* UIImageView+Extension.swift in Sources */,
 				F821D1232B67BA5900BDFFF0 /* ProfileViewController.swift in Sources */,
 				F825A28A2B34445400041B32 /* String+Extension.swift in Sources */,
+				F8278B292B6B742600B3AC10 /* VideoManager.swift in Sources */,
 				F883C3D12B26E84C004E94E3 /* TodoListVC.swift in Sources */,
 				F8D766692B26FCCC00F7B402 /* TodoListTVC.swift in Sources */,
 				F8B601342B4D493800401E1D /* TodoListCompletedVC.swift in Sources */,
@@ -581,6 +608,7 @@
 				F8303FEF2B62591D00FD7D14 /* UILabel+Extension.swift in Sources */,
 				F862C8142B622955008120FA /* UIView+Extension.swift in Sources */,
 				F8AAFEAC2B6A4ADF0093BB3B /* CoreDataManger.swift in Sources */,
+				F8278B272B6B71AB00B3AC10 /* RandomVideoViewController.swift in Sources */,
 				F8303FF12B62600E00FD7D14 /* MiddelBarView.swift in Sources */,
 				F883C3CD2B26E84C004E94E3 /* AppDelegate.swift in Sources */,
 				F821D11C2B67A88700BDFFF0 /* PictureCollectionViewCell.swift in Sources */,
