@@ -8,15 +8,25 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
+ 
+    
     //MARK: - View
     private lazy var profileView : ProfileView = ProfileView()
     //MARK: - Data 객체
-    var user : ProfileModel?
+    private var viewModel : ProfileViewModel
+    init(viewModel: ProfileViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
+        self.viewModel.delegate = self
         configureUI()
-        user = ProfileModel(name: "동진", age: 28)
         setLabelData()
     }
     
@@ -31,7 +41,23 @@ extension ProfileViewController{
         }
     }
     private func setLabelData(){
-        self.profileView.setNameLabel(user?.name ?? "이름")
-        self.profileView.setAgeLabel(user?.age ?? 0)
+        self.profileView.setNameLabel(viewModel.userName)
+        self.profileView.setAgeLabel(viewModel.userAge)
+//        updateUserName(name: viewModel.userName)
+//        updateUserAge(age: viewModel.userAge)
+        
+    }
+}
+extension ProfileViewController : ProfileViewModelDelegate{
+    func updateUserName(name: String) {
+        DispatchQueue.main.async{
+            self.profileView.setNameLabel(name)
+        }
+    }
+    
+    func updateUserAge(age: Int) {
+        DispatchQueue.main.async{
+            self.profileView.setAgeLabel(age)
+        }
     }
 }

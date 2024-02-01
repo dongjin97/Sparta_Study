@@ -139,7 +139,9 @@ extension MainVC{
         self.present(vc, animated: true)
     }
     @objc private func tabPushProfileVC(){
-        pushVC(ProfileViewController())
+        let user = ProfileModel(name: "동진", age: 27)
+        let viewModel = ProfileViewModel(user: user)
+        pushVC(ProfileViewController(viewModel: viewModel))
     }
     @objc private func tabPushLV3UseCoreData(){
         pushVC(UseCoreDataViewController())
